@@ -1,0 +1,158 @@
+<div class="principal">
+    <div class="container d-flex justify-content-end">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-12" style="margin-top: 80px;">
+                <div id="formContent" style="margin-left: 750px;">
+                    <!-- Tabs Titles -->
+
+                    <!-- Icon -->
+                    <div class="fadeIn first">
+                        <img src="../../assets/img/logo.png" id="icon" alt="User Icon" width="150px" height="150px"
+                            class="p-3" />
+                    </div>
+
+                    <!-- Login Form -->
+                    <form>
+                        <input type="text" id="login" class="fadeIn second" name="login" placeholder="Login">
+                        <input type="text" id="password" class="fadeIn third" name="login" placeholder="Senha">
+                        <input type="submit" class="fadeIn fourth" value="Log In">
+                    </form>
+
+                    <!-- Esqueceu a senha -->
+                    <div id="formFooter">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+                            Esqueceu a conta?
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Encontre sua conta</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Email address</label>
+                                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                                    aria-describedby="emailHelp">
+                                                <small id="emailHelp" class="form-text text-muted">Digite o e-mail que
+                                                    está relacionado com a sua conta </small>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleInputPassword1">Nome</label>
+                                                <input type="password" class="form-control" id="exampleInputPassword1">
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Fechar</button>
+                                        <button type="button" class="btn btn-primary">Enviar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="formFooter">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                            data-target="#staticBackdrop1">
+                            Criar uma nova conta
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdrop1" data-backdrop="static" data-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel1" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel1">Criar uma nova conta</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="inputNome">Nome</label>
+                                                    <input type="text" class="form-control" id="inputNome">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="inputUsuario">Usuario</label>
+                                                    <input type="text" class="form-control" id="inputUsuario">
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="inputDataNascimento">Data de Nascimento</label>
+                                                    <input type="text" class="form-control" id="inputDataNascimento">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="inputSenha">Senha</label>
+                                                    <input type="password" class="form-control" id="inputSenha">
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="inputState">Tipo usuário</label>
+                                                    <select id="inputState" class="form-control">
+                                                        <option selected>Escolha...</option>
+                                                        <option>Médico</option>
+                                                        <option>Paciente</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="inputCrm">CRM</label>
+                                                    <input type="text" class="form-control" id="inputCrm">
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="inputRua">Rua</label>
+                                                    <input type="text" class="form-control" id="inputRua">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="inputBairro">Bairro</label>
+                                                    <input type="text" class="form-control" id="inputBairro">
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-4">
+                                                    <label for="inputRua">CEP</label>
+                                                    <input type="text" class="form-control" id="inputRua">
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <label for="inputNumero">Numero</label>
+                                                    <input type="text" class="form-control" id="inputNumero">
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <label for="inputComplemento">Complemento</label>
+                                                    <input type="text" class="form-control" id="inputComplemento">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Fechar</button>
+                                        <button type="button" class="btn btn-primary">Enviar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
