@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
+import { PerfilLateralComponent } from './perfil-lateral/perfil-lateral.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    PerfilLateralComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
