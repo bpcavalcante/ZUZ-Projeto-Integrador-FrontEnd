@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { PerfilLateralComponent } from './perfil-lateral/perfil-lateral.component';
 import { FooterComponent } from './footer/footer.component';
 import { FeedComponent } from './feed/feed.component';
+import { SobreComponent } from './sobre/sobre.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FeedComponent } from './feed/feed.component';
     HomeComponent,
     PerfilLateralComponent,
     FooterComponent,
-    FeedComponent
+    FeedComponent,
+    SobreComponent
   ],
   imports: [
     BrowserModule,
