@@ -1,5 +1,5 @@
 <div class="principal">
-    <div class="container d-flex justify-content-end">
+    <div class="container d-flex justify-content-end" style="margin-bottom: 200px;">
         <div class="row d-flex align-items-center">
             <div class="col-md-12" style="margin-top: 80px;">
                 <div id="formContent" style="margin-left: 750px;">
@@ -12,11 +12,11 @@
                     </div>
 
                     <!-- Login Form -->
-                    <form>
+                    <div>
                         <input type="text" id="login" class="fadeIn second" name="login" placeholder="Login">
                         <input type="text" id="password" class="fadeIn third" name="login" placeholder="Senha">
                         <input type="submit" class="fadeIn fourth" value="Log In">
-                    </form>
+                    </div>
 
                     <!-- Esqueceu a senha -->
                     <div id="formFooter">
@@ -84,27 +84,32 @@
                                             <div class="form-row">
                                                 <div class="form-group col-md-6">
                                                     <label for="inputNome">Nome</label>
-                                                    <input type="text" class="form-control" id="inputNome">
+                                                    <input type="text" class="form-control" id="inputNome" [(ngModel)]='user.nome'>
                                                 </div>
                                                 <div class="form-group col-md-6">
-                                                    <label for="inputUsuario">Usuario</label>
-                                                    <input type="text" class="form-control" id="inputUsuario">
+                                                    <label for="inputUsuario">Usuario(e-mail)</label>
+                                                    <input type="text" class="form-control" id="inputUsuario" [(ngModel)]='user.usuario'>
                                                 </div>
                                             </div>
                                             <div class="form-row">
-                                                <div class="form-group col-md-6">
+                                                <div class="form-group col-md-12">
                                                     <label for="inputDataNascimento">Data de Nascimento</label>
-                                                    <input type="text" class="form-control" id="inputDataNascimento">
+                                                    <input type="text" class="form-control" id="inputDataNascimento" [(ngModel)]='user.data'>
+                                                </div>
+                                                
+                                                <div class="form-group col-md-6">
+                                                    <label for="senha">Senha</label>
+                                                    <input type="password" class="form-control" id="senha" (input)='conferirSenha($event)'value="{{senha}}">
                                                 </div>
                                                 <div class="form-group col-md-6">
-                                                    <label for="inputSenha">Senha</label>
-                                                    <input type="password" class="form-control" id="inputSenha">
+                                                    <label for="senhaConf">Confirmar Senha</label>
+                                                    <input type="password" class="form-control" id="senhaConf" [(ngModel)]='user.senha'>
                                                 </div>
                                             </div>
                                             <div class="form-row">
                                                 <div class="form-group col-md-6">
                                                     <label for="inputState">Tipo usuário</label>
-                                                    <select id="inputState" class="form-control">
+                                                    <select id="inputState" class="form-control" [(ngModel)]= 'user.tipoUsuario'>
                                                         <option selected>Escolha...</option>
                                                         <option>Médico</option>
                                                         <option>Paciente</option>
@@ -112,18 +117,18 @@
                                                 </div>
                                                 <div class="form-group col-md-6">
                                                     <label for="inputCrm">CRM</label>
-                                                    <input type="text" class="form-control" id="inputCrm">
+                                                    <input type="text" class="form-control" id="inputCrm" [(ngModel)]='user.crm'>
                                                 </div>
                                             </div>
                                             <hr>
                                             <div class="form-row">
                                                 <div class="form-group col-md-6">
                                                     <label for="inputRua">Rua</label>
-                                                    <input type="text" class="form-control" id="inputRua">
+                                                    <input type="text" class="form-control" id="inputRua" >
                                                 </div>
                                                 <div class="form-group col-md-6">
                                                     <label for="inputBairro">Bairro</label>
-                                                    <input type="text" class="form-control" id="inputBairro">
+                                                    <input type="text" class="form-control" id="inputBairro"> 
                                                 </div>
                                             </div>
                                             <div class="form-row">
@@ -145,7 +150,7 @@
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary"
                                             data-dismiss="modal">Fechar</button>
-                                        <button type="button" class="btn btn-primary">Enviar</button>
+                                        <button type="button" class="btn btn-primary" (click)='cadastrar()'>Enviar</button>
                                     </div>
                                 </div>
                             </div>
@@ -156,3 +161,6 @@
             </div>
         </div>
     </div>
+
+    <app-sobre></app-sobre>
+    <app-footer></app-footer>

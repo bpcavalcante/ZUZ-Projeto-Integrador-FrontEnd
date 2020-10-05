@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { User } from '../model/User';
+import { UsuarioLogin } from '../model/UsuarioLogin';
+import { AuthService } from '../service/auth.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +11,44 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  user: User = new User()
+  senha: string;
 
-  ngOnInit(): void {
+  usuarioLogin: UsuarioLogin = new UsuarioLogin()
+
+
+
+  constructor( 
+    private authService: AuthService, 
+    private router:Router) { }
+
+  ngOnInit() {
   }
+
+  conferirSenha(event: any){
+    this.senha= event.target.value;
+  }
+
+  cadastrar(){
+    if (this.senha === this.user.senha){
+      this.authService.cadastrar(this.user).subscribe((resp: User) => {
+        this.user = resp
+        this.router.navigate(["/login"])
+        alert("Usuário cadastrado com sucesso !")
+      })}
+    else{
+      alert('Senhas não conferem!')
+    }
+  }
+
+  entrar(){
+    this.authService.logar(this.usuarioLogin).subscribe((resp: UsuarioLogin)=> {
+      this.usuarioLogin = resp
+      localStorage.setItem('token', this.usuarioLogin.token)
+      this.router.navigate(['/feed'])
+    });
+    
+  }
+
 
 }
