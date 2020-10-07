@@ -13,9 +13,9 @@
 
                     <!-- Login Form -->
                     <div>
-                        <input type="text" id="login" class="fadeIn second" name="login" placeholder="Login">
-                        <input type="text" id="password" class="fadeIn third" name="login" placeholder="Senha">
-                        <input type="submit" class="fadeIn fourth" value="Log In">
+                        <input type="text" id="login" class="fadeIn second" name="login" placeholder="Login" [(ngModel)] = 'usuarioLogin.usuario'> 
+                        <input type="text" id="password" class="fadeIn third" name="login" placeholder="Senha" [(ngModel)] = 'usuarioLogin.senha'>
+                        <input type="submit" class="fadeIn fourth" value="Login" (click) = "entrar()">
                     </div>
 
                     <!-- Esqueceu a senha -->
@@ -80,7 +80,7 @@
                                         </button>
                                     </div>
                                     <div class="modal-body">
-                                        <form>
+                                        <div>
                                             <div class="form-row">
                                                 <div class="form-group col-md-6">
                                                     <label for="inputNome">Nome</label>
@@ -93,64 +93,30 @@
                                             </div>
                                             <div class="form-row">
                                                 <div class="form-group col-md-12">
-                                                    <label for="inputDataNascimento">Data de Nascimento</label>
-                                                    <input type="text" class="form-control" id="inputDataNascimento" [(ngModel)]='user.data'>
+                                                    <label for="inputCpf">CPF</label>
+                                                    <input type="text" class="form-control" id="inputCpf" [(ngModel)]='user.cpf'>
                                                 </div>
                                                 
                                                 <div class="form-group col-md-6">
                                                     <label for="senha">Senha</label>
                                                     <input type="password" class="form-control" id="senha" (input)='conferirSenha($event)'value="{{senha}}">
                                                 </div>
+
                                                 <div class="form-group col-md-6">
                                                     <label for="senhaConf">Confirmar Senha</label>
                                                     <input type="password" class="form-control" id="senhaConf" [(ngModel)]='user.senha'>
                                                 </div>
                                             </div>
-                                            <div class="form-row">
-                                                <div class="form-group col-md-6">
-                                                    <label for="inputState">Tipo usuário</label>
-                                                    <select id="inputState" class="form-control" [(ngModel)]= 'user.tipoUsuario'>
-                                                        <option selected>Escolha...</option>
-                                                        <option>Médico</option>
-                                                        <option>Paciente</option>
-                                                    </select>
-                                                </div>
-                                                <div class="form-group col-md-6">
-                                                    <label for="inputCrm">CRM</label>
-                                                    <input type="text" class="form-control" id="inputCrm" [(ngModel)]='user.crm'>
-                                                </div>
-                                            </div>
-                                            <hr>
-                                            <div class="form-row">
-                                                <div class="form-group col-md-6">
-                                                    <label for="inputRua">Rua</label>
-                                                    <input type="text" class="form-control" id="inputRua" >
-                                                </div>
-                                                <div class="form-group col-md-6">
-                                                    <label for="inputBairro">Bairro</label>
-                                                    <input type="text" class="form-control" id="inputBairro"> 
-                                                </div>
-                                            </div>
-                                            <div class="form-row">
-                                                <div class="form-group col-md-4">
-                                                    <label for="inputRua">CEP</label>
-                                                    <input type="text" class="form-control" id="inputRua">
-                                                </div>
-                                                <div class="form-group col-md-4">
-                                                    <label for="inputNumero">Numero</label>
-                                                    <input type="text" class="form-control" id="inputNumero">
-                                                </div>
-                                                <div class="form-group col-md-4">
-                                                    <label for="inputComplemento">Complemento</label>
-                                                    <input type="text" class="form-control" id="inputComplemento">
-                                                </div>
-                                            </div>
-                                        </form>
+                                       
+                                         
+                                            
+                                            
+                                        </div>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
+                                        <button type="button" class="btn btn-danger"
                                             data-dismiss="modal">Fechar</button>
-                                        <button type="button" class="btn btn-primary" (click)='cadastrar()'>Enviar</button>
+                                        <button type="button" class="btn btn-success" (click)='cadastrar()'>Cadastrar</button>
                                     </div>
                                 </div>
                             </div>

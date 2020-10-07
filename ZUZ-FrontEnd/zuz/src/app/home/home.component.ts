@@ -33,12 +33,13 @@ export class HomeComponent implements OnInit {
     if (this.senha === this.user.senha){
       this.authService.cadastrar(this.user).subscribe((resp: User) => {
         this.user = resp
-        this.router.navigate(["/login"])
+        this.router.navigate(["/home"])
         alert("Usuário cadastrado com sucesso !")
       })}
     else{
       alert('Senhas não conferem!')
     }
+
   }
 
   entrar(){
