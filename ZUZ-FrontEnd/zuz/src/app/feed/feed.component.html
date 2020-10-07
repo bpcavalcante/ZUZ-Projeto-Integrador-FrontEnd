@@ -12,7 +12,7 @@
         <div class="card-header d-flex justify-content-center">
 
             <!--Criar publicação-->
-            <button type="button" class="btn btn w-5" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Comece uma publicação</button>
+            <button type="button" class="btn btn d-flex justify-content-center" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Comece uma publicação</button>
 
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog" role="document">
@@ -31,6 +31,61 @@
                       </div>
                     </form>
                   </div>
+                  <!--Botão foto detro modal-->
+                  <button type="button" class="btn btn-light" data-toggle="modal" data-target="#modalExemplo"> Foto </button>
+                        <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel"> Foto </h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                                  <div class="modal-body">
+                                      <form>
+                                          <div class="form-group">
+                                            <label for="exampleFormControlFile1"></label>
+                                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                          </div>
+                                        </form>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                    <button type="button" class="btn btn-primary">Concluido</button>
+                                  </div>
+                            </div>
+                            </div>
+                        </div>
+                  <!--Botão foto detro modal-->
+                  
+                  <!--Botão video detro modal -->
+                        <button type="button" class=" btn btn-light" data-toggle="modal" data-target="#modalExemplo"> Video </button>
+                      <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Video</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                  </div>
+                                          <div class="modal-body">
+                                            <form>
+                                                <div class="form-group">
+                                                  <label for="exampleFormControlFile1"></label>
+                                                      <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                                </div>
+                                            </form>
+                                          </div>
+                                            <div class="modal-footer">
+                                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                              <button type="button" class="btn btn-primary">Concluido</button>
+                                            </div>
+                              </div>
+                          </div>
+                        </div>
+                           <!--Botão video detro modal-->          
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
                     <button type="button" class="btn btn-primary">Enviar</button>
@@ -38,42 +93,42 @@
                 </div>
               </div>
             </div>
-            </div>
+        </div>
             <!--Criar publicação-->
 
             <div class="container-flex d-flex justify-content-center">
 
                 <!--Botão foto-->
                 <button type="button" class="btn btn-light" data-toggle="modal" data-target="#modalExemplo"> Foto </button>
-                    <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel"> Foto </h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                            </div>
-                            <div class="modal-body">
-                                <form>
-                                    <div class="form-group">
-                                      <label for="exampleFormControlFile1"></label>
-                                      <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                                    </div>
-                                  </form>
-                            </div>
-                            <div class="modal-footer">
+                <div class="modal fade" id="modalExemploFoto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel"> Foto </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                          <div class="modal-body">
+                              <form>
+                                  <div class="form-group">
+                                    <label for="exampleFormControlFile1"></label>
+                                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                  </div>
+                                </form>
+                          </div>
+                          <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
                             <button type="button" class="btn btn-primary">Concluido</button>
-                            </div>
-                        </div>
-                        </div>
+                          </div>
                     </div>
+                    </div>
+                </div>
                     <!--Botão Foto-->
 
                     <!--Botão video-->
                 <button type="button" class="btn btn-light" data-toggle="modal" data-target="#modalExemplo"> Video </button>
-                <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade" id="modalExemploVideo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -101,7 +156,7 @@
 
                 <!--Botão artigo-->
                 <button type="button" class="btn btn-light" data-toggle="modal" data-target="#modalExemplo"> Artigo </button>
-                <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade" id="modalExemploArtigo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -122,9 +177,9 @@
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
                         <button type="button" class="btn btn-primary">Concluido</button>
                         </div>
-                        <!--Botão artigo-->
                     </div>
                     </div>
+               <!--Botão artigo-->
                 </div>
         </div>
       </div>
