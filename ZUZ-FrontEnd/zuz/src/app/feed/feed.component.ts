@@ -16,10 +16,10 @@ export class FeedComponent implements OnInit {
   key = 'data'
   reverse = true
 
-  postagem: Postagem = new Postagem()
+  postagem = new Postagem()
   listaPostagens: Postagem[]
 
-  tema: Tema = new Tema()
+  tema = new Tema()
   listaTemas: Tema[]
 
   idTema: number;
@@ -42,18 +42,6 @@ export class FeedComponent implements OnInit {
     })
   }
 
-  findAllTemas() {
-    this.temaService.getAllTemas().subscribe((resp: Tema[]) => {
-      this.listaTemas = resp
-    })
-  }
-
-  findByIdTema() {
-    this.temaService.getByIdTema(this.idTema).subscribe((resp: Tema) => {
-      this.tema = resp;
-    })
-  }
-
   publicar() {
     this.tema.id = this.idTema
     this.postagem.tema = this.tema
@@ -68,7 +56,20 @@ export class FeedComponent implements OnInit {
         this.findAllPostagens()
       })
     }
-
   }
+
+  findAllTemas() {
+    this.temaService.getAllTemas().subscribe((resp: Tema[]) => {
+      this.listaTemas = resp
+    })
+  }
+
+  findByIdTema() {
+    this.temaService.getByIdTema(this.idTema).subscribe((resp: Tema) => {
+      this.tema = resp;
+    })
+  }
+
+
 
 }

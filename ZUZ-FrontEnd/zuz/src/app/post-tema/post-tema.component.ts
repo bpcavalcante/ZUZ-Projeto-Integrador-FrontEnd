@@ -12,7 +12,7 @@ export class PostTemaComponent implements OnInit {
 
   tema: Tema = new Tema()
   listaTemas: Tema[]
-  idTema: number;
+  
 
   constructor(
     private temaService: TemaService,
@@ -20,6 +20,7 @@ export class PostTemaComponent implements OnInit {
   ) { }
 
   ngOnInit(){
+    window.scroll(0,0)
     this.findAllTemas()
   }
 
@@ -29,8 +30,8 @@ export class PostTemaComponent implements OnInit {
     })
   }
 
-  findByIdTema() {
-    this.temaService.getByIdTema(this.idTema).subscribe((resp: Tema) => {
+  findByIdTema(id:number) {
+    this.temaService.getByIdTema(this.tema.id).subscribe((resp: Tema) => {
       this.tema = resp;
     })
   }
