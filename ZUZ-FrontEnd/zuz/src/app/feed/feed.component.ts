@@ -16,10 +16,10 @@ export class FeedComponent implements OnInit {
   key = 'data'
   reverse = true
 
-  postagem = new Postagem()
+  postagem: Postagem = new Postagem()
   listaPostagens: Postagem[]
 
-  tema = new Tema()
+  tema: Tema = new Tema()
   listaTemas: Tema[]
 
   idTema: number;
@@ -31,9 +31,9 @@ export class FeedComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    window.scroll(0, 0),
-      this.findAllPostagens,
-      this.findAllTemas
+    window.scroll(0,0)
+      this.findAllPostagens()
+      this.findAllTemas()
   }
 
   findAllPostagens() {

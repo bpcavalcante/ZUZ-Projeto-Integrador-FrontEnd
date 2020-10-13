@@ -37,12 +37,12 @@
 
                     <div class="col-md-6 justify-content-end">
                       <div class="form-group m-0">
-                        <label class="text-monospace" for="tema">Escolha um tema ou <a routerLink='/posttema'>Cadastre
+                        <label class="text-monospace" for="tema">Escolha um tema ou <a routerLink='/posttema' data-dismiss="modal">Cadastre
                             um novo</a></label>
                         <select name="tema" id='tema' class="form-control" (change)='findByIdTema()' [(ngModel)]='idTema'
                           >
                           <option *ngFor='let item of listaTemas' value="{{item.id}}">
-                            {{item.tema.nometema}}
+                            {{item.nometema}}
                           </option>
                         </select>
                       </div>
@@ -53,7 +53,7 @@
 
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                  <button type="button" class="btn btn-success" (click)='publicar()'>Publicar</button>
+                  <button type="button" class="btn btn-success" (click)='publicar()' data-dismiss="modal">Publicar</button>
                 </div>
               </div>
               <!--Fim-->
@@ -235,11 +235,10 @@
       </div>
       <!--Postagens-->
       <div class="row mt-5">
-        <div class="card border-info mb-3 " style="width: 850px;" >
-          <div class="card-header">Tema:  </div>
+        <div class="card border-info mb-3" *ngFor = "let item of listaPostagens" style="width: 850px;" >
+          <div class="card-header">Tema: {{item.tema.nometema}} </div>
           <div class="card-body text-info">
-            <h5 class="card-title">Info card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class="card-text"> {{item.descricao}} </p>
           </div>
         </div>
       </div>
