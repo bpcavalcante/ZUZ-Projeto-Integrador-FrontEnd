@@ -37,11 +37,12 @@
 
                     <div class="col-md-6 justify-content-end">
                       <div class="form-group m-0">
-                        <label class="text-monospace" for="tema">Escolha um tema ou <a
-                            routerLink='/cadastro-tema'>Cadastre um novo</a></label>
-                        <select name="tema" id='tema' class="form-control" (change)='findByIdTema()'>
+                        <label class="text-monospace" for="tema">Escolha um tema ou <a routerLink='/posttema' data-dismiss="modal">Cadastre
+                            um novo</a></label>
+                        <select name="tema" id='tema' class="form-control" (change)='findByIdTema()' [(ngModel)]='idTema'
+                          >
                           <option *ngFor='let item of listaTemas' value="{{item.id}}">
-                            {{item.descricao}}
+                            {{item.nometema}}
                           </option>
                         </select>
                       </div>
@@ -52,7 +53,7 @@
 
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                  <button type="button" class="btn btn-success" (click) = 'publicar()'>Criar</button>
+                  <button type="button" class="btn btn-success" (click)='publicar()' data-dismiss="modal">Publicar</button>
                 </div>
               </div>
               <!--Fim-->
@@ -232,6 +233,20 @@
 
 
       </div>
+      <!--Postagens-->
+      <div class="row mt-5">
+        <div class="card border-info mb-3" *ngFor = "let item of listaPostagens" style="width: 850px;" >
+          <div class="card-header">Tema: {{item.tema.nometema}} </div>
+          <div class="card-body text-info">
+            <p class="card-text"> {{item.descricao}} </p>
+          </div>
+        </div>
+      </div>
     </div>
 
   </div>
+
+  <!-- Postagem -->
+  
+
+</div>

@@ -31,26 +31,14 @@ export class FeedComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    window.scroll(0, 0),
-      this.findAllPostagens,
-      this.findAllTemas
+    window.scroll(0,0)
+      this.findAllPostagens()
+      this.findAllTemas()
   }
 
   findAllPostagens() {
     this.postagemService.getAllPostagens().subscribe((resp: Postagem[]) => {
       this.listaPostagens = resp
-    })
-  }
-
-  findAllTemas() {
-    this.temaService.getAllTemas().subscribe((resp: Tema[]) => {
-      this.listaTemas = resp
-    })
-  }
-
-  findByIdTema() {
-    this.temaService.getByIdTema(this.idTema).subscribe((resp: Tema) => {
-      this.tema = resp;
     })
   }
 
@@ -68,7 +56,20 @@ export class FeedComponent implements OnInit {
         this.findAllPostagens()
       })
     }
-
   }
+
+  findAllTemas() {
+    this.temaService.getAllTemas().subscribe((resp: Tema[]) => {
+      this.listaTemas = resp
+    })
+  }
+
+  findByIdTema() {
+    this.temaService.getByIdTema(this.idTema).subscribe((resp: Tema) => {
+      this.tema = resp;
+    })
+  }
+
+
 
 }

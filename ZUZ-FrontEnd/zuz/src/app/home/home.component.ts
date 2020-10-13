@@ -35,6 +35,7 @@ export class HomeComponent implements OnInit {
         this.user = resp
         this.router.navigate(["/home"])
         alert("Usuário cadastrado com sucesso !")
+        
       })}
     else{
       alert('Senhas não conferem!')

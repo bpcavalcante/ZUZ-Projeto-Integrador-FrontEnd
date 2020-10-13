@@ -7,6 +7,7 @@ import { FeedComponent } from './feed/feed.component';
 import { HomeComponent } from './home/home.component';
 import { PutPostagemComponent } from './put-postagem/put-postagem.component';
 import { PutTemaComponent } from './put-tema/put-tema.component';
+import { PostTemaComponent } from './post-tema/post-tema.component';
 import { SobreComponent } from './sobre/sobre.component';
 
 const routes: Routes = [
@@ -18,7 +19,8 @@ const routes: Routes = [
   { path: 'editar-post/:id', component: PutPostagemComponent},
   { path: 'delete-post/:id', component: DeletePostagemComponent},
   { path: 'editar-tema/:id', component: PutTemaComponent},
-  { path: 'delete-tema/:id', component: DeleteTemaComponent}
+  { path: 'delete-tema/:id', component: DeleteTemaComponent},
+  { path: 'posttema', component: PostTemaComponent}
 ];
 
 @NgModule({
