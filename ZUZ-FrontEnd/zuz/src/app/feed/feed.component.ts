@@ -25,10 +25,6 @@ export class FeedComponent implements OnInit {
   idTema: number;
 
   idPost: number;
-
-  
-
-
   constructor(
     private postagemService: PostagemService,
     private temaService: TemaService,
@@ -40,12 +36,11 @@ export class FeedComponent implements OnInit {
     this.findAllPostagens()
     this.findAllTemas()
 
-    let id: number = this.route.snapshot.params['id']
-    if (id != undefined){
-      this.findByIdPostagem(id)
+    this.idPost = this.route.snapshot.params['id']
+    if (this.idPost != undefined){
+      this.findByIdPostagem(this.idPost)
     }
 
-    
   }
 
   findAllPostagens() {
@@ -105,7 +100,7 @@ export class FeedComponent implements OnInit {
   }
 
   btnSim() {
-    this.postagemService.deletePostagem(this.postagem.id).subscribe(() => {
+    this.postagemService.deletePostagem(this.idPost).subscribe(() => {
       this.router.navigate(['/feed'])
       alert('Postagem apagada com sucesso !')
     })

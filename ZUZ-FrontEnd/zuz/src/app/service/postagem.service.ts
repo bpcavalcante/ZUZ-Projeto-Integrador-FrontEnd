@@ -32,7 +32,7 @@ getByIdPostagem(id: number){
 }
 
 deletePostagem(id: number){
-	return this.http.get(`http://localhost:8080/postagem/${id}`, this.token)
+	return this.http.delete(`http://localhost:8080/postagem/${id}`, this.token)
 }
 
 }
