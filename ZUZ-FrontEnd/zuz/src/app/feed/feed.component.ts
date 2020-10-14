@@ -44,6 +44,8 @@ export class FeedComponent implements OnInit {
     if (id != undefined){
       this.findByIdPostagem(id)
     }
+
+    
   }
 
   findAllPostagens() {

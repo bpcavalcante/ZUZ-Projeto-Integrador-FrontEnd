@@ -5,7 +5,6 @@ import { DeleteTemaComponent } from './delete-tema/delete-tema.component';
 import { FeedComponent } from './feed/feed.component';
 import { HomeComponent } from './home/home.component';
 import { PostTemaComponent } from './post-tema/post-tema.component';
-import { PutPostagemComponent } from './put-postagem/put-postagem.component';
 import { PutTemaComponent } from './put-tema/put-tema.component';
 import { SobreComponent } from './sobre/sobre.component';
 
@@ -16,7 +15,6 @@ const routes: Routes = [
   { path: 'feed/:id', component: FeedComponent},
   { path: 'sobre' , component: SobreComponent},
   { path: 'posttema', component: PostTemaComponent},
-  { path: 'put-postagem/:id', component: PutPostagemComponent},
   { path: 'delete-postagem', component: DeletePostagemComponent},
   { path: 'put-tema/:id' , component: PutTemaComponent},
   { path:  'delete-tema/:id' , component: DeleteTemaComponent}
