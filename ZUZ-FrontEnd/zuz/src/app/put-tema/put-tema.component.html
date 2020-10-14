@@ -1,5 +1,7 @@
+
 <div class="container">
-    <div class="row">
+    <app-navbar></app-navbar>
+    <div class="row" style="margin-top: 80px;">
      <div class="col-md-4">
          <app-perfil-lateral></app-perfil-lateral>
      </div>
@@ -13,7 +15,7 @@
          </div>
          <div class="row mb-5">
              <div class="col-md-12 d-flex justify-content-center">
-                 <button class="btn btn-outline-success w-25" >Cadastrar</button>
+                 <button class="btn btn-outline-success w-25" (click) = "salvar()">Salvar</button>
              </div>
          </div>
  

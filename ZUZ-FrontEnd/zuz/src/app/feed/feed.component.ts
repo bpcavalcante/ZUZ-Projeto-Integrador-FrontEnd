@@ -26,7 +26,7 @@ export class FeedComponent implements OnInit {
 
   idPost: number;
 
-  novo: boolean;
+  
 
 
   constructor(
@@ -37,12 +37,8 @@ export class FeedComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    window.scroll(0, 0)
     this.findAllPostagens()
     this.findAllTemas()
-    let id: number = this.route.snapshot.params['id']
-
-    this.findByIdPostagem(id)
 
   }
 

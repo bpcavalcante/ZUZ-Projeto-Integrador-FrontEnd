@@ -1,0 +1,28 @@
+<div class="container">
+    <app-navbar></app-navbar>
+    <div class="row">
+        <div class="col-md-4">
+            <app-perfil-lateral></app-perfil-lateral>
+        </div>
+        <div class="col-md-8">
+            <h3 class="text-center mb-4 ">Excluir Tema</h3>
+            <div class="card mt-5">
+                <div class="card-header">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-md-8">
+                            <h5 class="card-title">{{tema.nometema}} </h5>
+                        </div>
+                        <div class="col-md-4 d-flex justify-content-end">
+                        </div>
+                    </div>
+                </div>
+
+                <h5 class="text-center">Tem certeza que deseja apagar esse tema?</h5>
+                <div class="d-flex justify-content-center mt-5">
+                    <button class="btn btn-outline-success mr-3" (click)="btnSim()">Sim</button>
+                    <button class="btn btn-outline-danger" (click)="btnNao()">Não</button>
+                </div>
+            </div>
+
+        </div>
+    </div>

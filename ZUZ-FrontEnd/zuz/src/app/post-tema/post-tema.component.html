@@ -1,5 +1,7 @@
+
 <div class="container">
-    <div class="row">
+    <app-navbar></app-navbar>
+    <div class="row" style="margin-top: 80px;">
      <div class="col-md-4">
          <app-perfil-lateral></app-perfil-lateral>
      </div>
@@ -41,7 +43,7 @@
                          <a class="btn btn-outline-info mr-3" [routerLink] = "['/put-tema', item.id]"
                          >Editar</a>
  
-                         <a class="btn btn-outline-danger">Apagar</a>
+                         <a class="btn btn-outline-danger" [routerLink] = "['/delete-tema',item.id]">Apagar</a>
                      </td>
                  </tr>
              </tbody>

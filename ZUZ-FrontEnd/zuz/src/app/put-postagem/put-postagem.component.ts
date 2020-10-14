@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Postagem } from '../model/Postagem';
+import { Tema } from '../model/Tema';
+import { PostagemService } from '../service/postagem.service';
+import { TemaService } from '../service/tema.service';
 
 @Component({
   selector: 'app-put-postagem',
@@ -7,9 +12,59 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PutPostagemComponent implements OnInit {
 
-  constructor() { }
+  postagem: Postagem = new Postagem()
+  tema: Tema = new Tema()
+  listaTemas: Tema[]
+  idTema: number
+  idPost: number
 
-  ngOnInit(): void {
+  constructor(
+    private temaService: TemaService,
+    private postagemService: PostagemService,
+    private router: Router,
+    private route: ActivatedRoute
+
+  ) { }
+
+  ngOnInit() {
+    this.findAllTemas()
+    this.idPost = this.route.snapshot.params["id"]
+    this.findByIdPostagem(this.idPost)
   }
+
+  findAllTemas() {
+    this.temaService.getAllTemas().subscribe((resp: Tema[]) => {
+      this.listaTemas = resp
+    })
+  }
+
+  findByIdTema() {
+    this.temaService.getByIdTema(this.idTema).subscribe((resp: Tema) => {
+      this.tema = resp;
+    })
+  }
+
+  findByIdPostagem(id: number) {
+    this.postagemService.getByIdPostagem(id).subscribe((resp: Postagem) => {
+      this.postagem = resp
+    })
+  }
+
+  salvar() {
+    this.tema.id = this.idTema
+    this.postagem.tema = this.tema
+
+    this.postagemService.putPostagem(this.postagem).subscribe((resp: Postagem) => {
+      this.postagem = resp
+      this.router.navigate(['/feed'])
+      alert('Postagem alterada com sucesso')
+    }, err => {
+      if (err.status == '500') {
+        alert('Preencha todos os campos corretamente antes de enviar !')
+      }
+    })
+  }
+
+
 
 }

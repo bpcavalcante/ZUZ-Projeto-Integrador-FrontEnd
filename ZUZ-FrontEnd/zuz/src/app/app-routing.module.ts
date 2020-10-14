@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { DeletePostagemComponent } from './delete-postagem/delete-postagem.component';
+import { DeleteTemaComponent } from './delete-tema/delete-tema.component';
 import { FeedComponent } from './feed/feed.component';
 import { HomeComponent } from './home/home.component';
 import { PostTemaComponent } from './post-tema/post-tema.component';
@@ -14,8 +16,10 @@ const routes: Routes = [
   { path: 'feed/:id', component: FeedComponent},
   { path: 'sobre' , component: SobreComponent},
   { path: 'posttema', component: PostTemaComponent},
-  { path: 'put-postagem', component: PutPostagemComponent},
-  { path: 'put-tema/:id' , component: PutTemaComponent}
+  { path: 'put-postagem/:id', component: PutPostagemComponent},
+  { path: 'delete-postagem', component: DeletePostagemComponent},
+  { path: 'put-tema/:id' , component: PutTemaComponent},
+  { path:  'delete-tema/:id' , component: DeleteTemaComponent}
 ];
 
 @NgModule({
