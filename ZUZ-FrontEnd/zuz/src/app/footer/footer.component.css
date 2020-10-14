@@ -1,0 +1,32 @@
+ul.social-network{
+    list-style: none;
+    display: inline;
+
+    padding: 0;
+}
+
+ul.social-network li{
+    display: inline;
+    margin: 0;
+    padding: 5px;
+}
+
+.faGithub, .faLinkedin, .faTwitter{
+    color: white;
+}
+
+.faGithub:hover{
+    color: #051433;
+}
+
+.faLinkedin:hover{
+    color: #0077B5;
+}
+
+.faTwitter:hover{
+    color: #1DA2F1;
+}
+
+.colorplate{
+    color: rgb(23, 134, 138)
+}
