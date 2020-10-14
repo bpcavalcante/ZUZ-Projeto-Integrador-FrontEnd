@@ -16,6 +16,8 @@ import { SobreComponent } from './sobre/sobre.component';
 import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { PostTemaComponent } from './post-tema/post-tema.component';
+import { PutPostagemComponent } from './put-postagem/put-postagem.component';
+import { PutTemaComponent } from './put-tema/put-tema.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { PostTemaComponent } from './post-tema/post-tema.component';
     SobreComponent,
     LoginComponent,
     CadastroComponent,
-    PostTemaComponent
+    PostTemaComponent,
+    PutPostagemComponent,
+    PutTemaComponent
   ],
   imports: [
     BrowserModule,

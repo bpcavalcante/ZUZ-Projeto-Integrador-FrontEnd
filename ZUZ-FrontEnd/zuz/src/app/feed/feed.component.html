@@ -13,14 +13,14 @@
 
           <!--Criar publicação-->
           <button type="button" class="btn btn d-flex justify-content-center" data-toggle="modal"
-            data-target="#exampleModal" data-whatever="@mdo">Comece uma publicação</button>
+            data-target="#cadastrar" data-whatever="@mdo">Comece uma publicação</button>
 
-          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+          <div class="modal fade" id="cadastrar" tabindex="-1" role="dialog" aria-labelledby="criarpublicacao"
             aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Criar publicação</h5>
+                  <h5 class="modal-title" id="criarpublicacao">Criar publicação</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                     <span aria-hidden="true">&times;</span>
                   </button>
@@ -37,10 +37,11 @@
 
                     <div class="col-md-6 justify-content-end">
                       <div class="form-group m-0">
-                        <label class="text-monospace" for="tema">Escolha um tema ou <a routerLink='/posttema' data-dismiss="modal">Cadastre
+                        <label class="text-monospace" for="tema">Escolha um tema ou <a routerLink='/posttema'
+                            data-dismiss="modal">Cadastre
                             um novo</a></label>
-                        <select name="tema" id='tema' class="form-control" (change)='findByIdTema()' [(ngModel)]='idTema'
-                          >
+                        <select name="tema" id='tema' class="form-control" (change)='findByIdTema()'
+                          [(ngModel)]='idTema'>
                           <option *ngFor='let item of listaTemas' value="{{item.id}}">
                             {{item.nometema}}
                           </option>
@@ -53,7 +54,8 @@
 
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                  <button type="button" class="btn btn-success" (click)='publicar()' data-dismiss="modal">Publicar</button>
+                  <button type="button" class="btn btn-success" (click)='publicar()'
+                    data-dismiss="modal">Publicar</button>
                 </div>
               </div>
               <!--Fim-->
@@ -235,23 +237,70 @@
       </div>
       <!--Postagens-->
       <div class="row mt-5" style="margin-left: 5px;">
-        <div class="card border-info mb-3" *ngFor = "let item of listaPostagens | orderBy : key : reverse" style="width: 865px;" >
-          <div class="card-header"><h3 class="text-black">Tema: {{item.tema.nometema}}</h3>  </div>
+        <div class="card border-info mb-3" *ngFor="let item of listaPostagens | orderBy : key : reverse"
+          style="width: 865px;">
+          <div class="card-header">
+            <h3 class="text-black">Tema: {{item.tema.nometema}}</h3>
+          </div>
           <div class="card-body text-info">
             <p class="card-text"> {{item.descricao}} </p>
             <td class="d-flex justify-content-end">
-              <a class="btn btn-outline-info mr-3">Editar</a>
-
+              <a class="btn btn-outline-info mr-3" data-toggle="modal" data-target="#editar" [routerLink] = "['/feed', item.id]" >Editar</a>
               <a class="btn btn-outline-danger">Apagar</a>
-          </td>
+            </td>
           </div>
         </div>
       </div>
+
+      <!--Modal editar-->
+      <div class="modal fade" id="editar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Editar publicação</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+
+            <div class="modal-body">
+              <div>
+                <div class="form-group">
+                  <label for="message-text" class="col-form-label"></label>
+                  <textarea class="form-control" id="message-text" placeholder="No que você está pensando?"
+                    [(ngModel)]='postagem.descricao'></textarea>
+                </div>
+
+                <div class="col-md-6 justify-content-end">
+                  <div class="form-group m-0">
+                    <label class="text-monospace" for="tema2">Escolha um tema</label>
+                    <select name="tema2" id='tema2' class="form-control" (change)='findByIdTema()' [(ngModel)]='idTema'>
+                      <option *ngFor='let item of listaTemas' value="{{item.id}}">
+                        {{item.nometema}}
+                      </option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+              <button type="button" class="btn btn-success" (click)='salvar()'  data-dismiss="modal">Salvar</button>
+            </div>
+          </div>
+          <!--Fim-->
+        </div>
+      </div>
+
+
     </div>
 
   </div>
 
   <!-- Postagem -->
-  
+
 
 </div>

@@ -38,7 +38,8 @@
                      <th scope="row">{{item.id}}</th>
                      <td>{{item.nometema}}</td>
                      <td class="d-flex justify-content-end">
-                         <a class="btn btn-outline-info mr-3">Editar</a>
+                         <a class="btn btn-outline-info mr-3" [routerLink] = "['/put-tema', item.id]"
+                         >Editar</a>
  
                          <a class="btn btn-outline-danger">Apagar</a>
                      </td>
