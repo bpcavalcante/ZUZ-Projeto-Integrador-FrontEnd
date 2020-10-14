@@ -108,8 +108,8 @@
                 <div class="modal-body">
                   <form>
                     <div class="form-group">
-                      <label for="exampleFormControlFile1"></label>
-                      <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                      <label for="exampleFormControlFile2"></label>
+                      <input type="file" class="form-control-file" id="exampleFormControlFile2">
                     </div>
                   </form>
                 </div>
@@ -137,8 +137,8 @@
                 <div class="modal-body">
                   <form>
                     <div class="form-group">
-                      <label for="exampleFormControlFile1"></label>
-                      <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                      <label for="exampleFormControlFile3"></label>
+                      <input type="file" class="form-control-file" id="exampleFormControlFile3">
                     </div>
                   </form>
                 </div>
@@ -234,11 +234,16 @@
 
       </div>
       <!--Postagens-->
-      <div class="row mt-5">
-        <div class="card border-info mb-3" *ngFor = "let item of listaPostagens" style="width: 850px;" >
-          <div class="card-header">Tema: {{item.tema.nometema}} </div>
+      <div class="row mt-5" style="margin-left: 5px;">
+        <div class="card border-info mb-3" *ngFor = "let item of listaPostagens | orderBy : key : reverse" style="width: 865px;" >
+          <div class="card-header"><h3 class="text-black">Tema: {{item.tema.nometema}}</h3>  </div>
           <div class="card-body text-info">
             <p class="card-text"> {{item.descricao}} </p>
+            <td class="d-flex justify-content-end">
+              <a class="btn btn-outline-info mr-3">Editar</a>
+
+              <a class="btn btn-outline-danger">Apagar</a>
+          </td>
           </div>
         </div>
       </div>
