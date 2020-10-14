@@ -40,10 +40,11 @@ export class FeedComponent implements OnInit {
     window.scroll(0, 0)
     this.findAllPostagens()
     this.findAllTemas()
+
     let id: number = this.route.snapshot.params['id']
-
-    this.findByIdPostagem(id)
-
+    if (id != undefined){
+      this.findByIdPostagem(id)
+    }
   }
 
   findAllPostagens() {

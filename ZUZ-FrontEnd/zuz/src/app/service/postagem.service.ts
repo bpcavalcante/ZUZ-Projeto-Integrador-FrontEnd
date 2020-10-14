@@ -24,15 +24,15 @@ postPostagem(postagem: Postagem){
 }
 
 putPostagem(postagem: Postagem){
-	return this.http.put('http://localhost:8080/postagens', postagem, this.token)
+	return this.http.put('http://localhost:8080/postagem', postagem, this.token)
 }
 
 getByIdPostagem(id: number){
-	return this.http.get(`http://localhost:8080/postagens/${id}`, this.token)
+	return this.http.get(`http://localhost:8080/postagem/${id}`, this.token)
 }
 
 deletePostagem(id: number){
-	return this.http.get(`http://localhost:8080/postagens/${id}`, this.token)
+	return this.http.get(`http://localhost:8080/postagem/${id}`, this.token)
 }
 
 
