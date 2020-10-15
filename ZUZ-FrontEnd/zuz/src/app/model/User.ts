@@ -8,6 +8,7 @@ export class User {
     public usuario: string;
     public cpf: string;
     public senha: string;
+    public foto: string;
     public consulta: Consulta[] 
     public postagem: Postagem[] 
 }
