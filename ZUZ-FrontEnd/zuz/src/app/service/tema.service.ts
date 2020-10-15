@@ -23,6 +23,10 @@ getByIdTema(id:number){
   return this.http.get(`http://localhost:8080/tema/${id}`, this.token)
 }
 
+getByNomeTema(nome: string){
+  return this.http.get(`http://localhost:8080/tema/nome/${nome}`, this.token)
+}
+
 postTema(tema: Tema){
   return this.http.post('http://localhost:8080/tema', tema, this.token)
  }
