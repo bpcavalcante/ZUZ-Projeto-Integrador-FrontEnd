@@ -13,24 +13,15 @@
         <div class="card-header d-flex justify-content-center">
 
           <!--Criar publicação-->
-<<<<<<< HEAD
-          <button type="button" class="btn btn d-flex justify-content-center" data-toggle="modal"
-            data-target="#cadastrar" data-whatever="@mdo">Comece uma publicação</button>
-=======
           <button type="button" class="btn btn d-flex justify-content-center texto1" data-toggle="modal"
-            data-target="#exampleModal" data-whatever="@mdo">Comece uma publicação</button>
->>>>>>> 893ad5abc8dd648f5cd9b02c27b3dc165c58f99e
+            data-target="#cadastrar" data-whatever="@mdo">Comece uma publicação</button>
 
           <div class="modal fade" id="cadastrar" tabindex="-1" role="dialog" aria-labelledby="criarpublicacao"
             aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-<<<<<<< HEAD
-                  <h5 class="modal-title" id="criarpublicacao">Criar publicação</h5>
-=======
                   <h5 class="modal-title texto1" id="exampleModalLabel">Criar publicação</h5>
->>>>>>> 893ad5abc8dd648f5cd9b02c27b3dc165c58f99e
                   <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                     <span aria-hidden="true">&times;</span>
                   </button>
@@ -57,20 +48,11 @@
 
                     <div class="col-md-6 justify-content-end">
                       <div class="form-group m-0">
-<<<<<<< HEAD
-                        <label class="text-monospace" for="tema">Escolha um tema ou <a routerLink='/posttema'
-                            data-dismiss="modal">Cadastre
-                            um novo</a></label>
-                        <select name="tema" id='tema' class="form-control" (change)='findByIdTema()'
-                          [(ngModel)]='idTema'>
-                          <option *ngFor='let item of listaTemas' value="{{item.id}}">
-=======
                         <label class="texto1 " for="tema">Escolha um tema ou <a routerLink='/posttema' data-dismiss="modal" class="texto1">Cadastre
                             um novo</a></label>
                         <select name="tema" id='tema' class="form-control" (change)='findByIdTema()' [(ngModel)]='idTema'
                           >
                           <option class="texto1" *ngFor='let item of listaTemas' value="{{item.id}}">
->>>>>>> 893ad5abc8dd648f5cd9b02c27b3dc165c58f99e
                             {{item.nometema}}
                           </option>
                         </select>
@@ -360,11 +342,6 @@
 
   <!-- Postagem -->
 
-<<<<<<< HEAD
-
-</div>
-=======
 </div>
 
 <app-footer></app-footer>
->>>>>>> 893ad5abc8dd648f5cd9b02c27b3dc165c58f99e
