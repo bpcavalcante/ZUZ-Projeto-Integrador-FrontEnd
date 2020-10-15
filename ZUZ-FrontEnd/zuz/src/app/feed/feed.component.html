@@ -36,12 +36,12 @@
                     </div>
                     <div class="form-group">
                       <label for="message-text" class="col-form-label"></label>
-                      <input class="form-control" id="message-text" placeholder="No que você está pensando?"
+                      <input class="form-control" id="message-text" placeholder="Poste o link da imagem"
                         [(ngModel)]='postagem.foto'>
                     </div>
                     <div class="form-group">
                       <label for="message-text" class="col-form-label"></label>
-                      <input class="form-control" id="message-text" placeholder="Siga o link do video?"
+                      <input class="form-control" id="message-text" placeholder="Poste o link do video"
                         [(ngModel)]='postagem.video'>
                     </div>
 
@@ -252,10 +252,10 @@
           <div class="card-header">
             <h3 class="text-black">Tema: {{item.tema.nometema}}</h3>
           </div>
-          <div class="card-body text-info">
+          <div class="card-body text-info" >
             <p class="card-text"> {{item.descricao}} </p>
             <div *ngIf = "item.foto != '' ">  
-              <img src="{{item.foto}}" alt="">
+              <img src="{{item.foto}}" alt="" width = "600" height = "400">
             </div>
             
             <div *ngIf = "item.video != '' ">            
