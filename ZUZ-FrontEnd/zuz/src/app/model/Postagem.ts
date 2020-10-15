@@ -7,4 +7,8 @@ export class Postagem{
     public dataPostagem: Date;
     public usuario: User; 
     public tema: Tema;
+    public foto: string;
+    public video: string;
+    public artigo: string;
+    	
 }

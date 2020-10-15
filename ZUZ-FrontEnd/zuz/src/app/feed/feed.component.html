@@ -34,6 +34,16 @@
                       <textarea class="form-control" id="message-text" placeholder="No que você está pensando?"
                         [(ngModel)]='postagem.descricao'></textarea>
                     </div>
+                    <div class="form-group">
+                      <label for="message-text" class="col-form-label"></label>
+                      <input class="form-control" id="message-text" placeholder="No que você está pensando?"
+                        [(ngModel)]='postagem.foto'>
+                    </div>
+                    <div class="form-group">
+                      <label for="message-text" class="col-form-label"></label>
+                      <input class="form-control" id="message-text" placeholder="Siga o link do video?"
+                        [(ngModel)]='postagem.video'>
+                    </div>
 
                     <div class="col-md-6 justify-content-end">
                       <div class="form-group m-0">
@@ -244,6 +254,16 @@
           </div>
           <div class="card-body text-info">
             <p class="card-text"> {{item.descricao}} </p>
+            <div *ngIf = "item.foto != '' ">  
+              <img src="{{item.foto}}" alt="">
+            </div>
+            
+            <div *ngIf = "item.video != '' ">            
+              <object width="600" height="400">
+                <param name="movie" value="{{item.video}}" />
+                <embed src="{{item.video}}"  type="application/x-shockwave-flash"/>
+              </object>
+            </div>
             <td class="d-flex justify-content-end"> <!--*****************************************-->
               <a class="btn btn-outline-info mr-3" data-toggle="modal" data-target="#editar" [routerLink] = "['/feed', item.id]" >Editar</a>
               <a class="btn btn-outline-danger"  data-toggle="modal" data-target="#apagar" [routerLink] = "['/feed', item.id]">Apagar</a>
@@ -298,14 +318,14 @@
       <!--  Modal Apagar -->
       <div class="modal" tabindex="-1" id="apagar" >
         <div class="modal-dialog">
-          <div class="modal-content">
+          <div class="modal-content ">
             <div class="modal-header">
               <h5 class="modal-title">Tem certeza que deseja apagar ?</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            <div class="d-flex justify-content-center mt-5">
+            <div class="d-flex justify-content-center mt-5 mb-5">
               <button class="btn btn-outline-success mr-3" (click)="btnSim()" data-dismiss="modal" >Sim</button>
               <button class="btn btn-outline-danger" (click)="btnNao()" data-dismiss="modal">Não</button>
           </div>
