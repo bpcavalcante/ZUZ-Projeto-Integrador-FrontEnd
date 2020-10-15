@@ -1,116 +1,118 @@
-<div class="principal">
-    <div class="container d-flex justify-content-end" style="margin-bottom: 200px;">
-        <div class="row d-flex align-items-center">
-            <div class="col-md-12" style="margin-top: 80px;">
-                <div id="formContent" style="margin-left: 750px;">
-                    <!-- Tabs Titles -->
 
-                    <!-- Icon -->
-                    <div class="fadeIn first">
-                        <img src="../../assets/img/zuz logo.png" id="icon" alt="User Icon" width="150px" height="150px"
-                            class="p-3" />
-                    </div>
-
-                    <!-- Login Form -->
-                    <div>
-                        <input type="text" id="login" class="fadeIn second" name="login" placeholder="Login" [(ngModel)] = 'usuarioLogin.usuario'> 
-                        <input type="text" id="password" class="fadeIn third" name="login" placeholder="Senha" [(ngModel)] = 'usuarioLogin.senha'>
-                        <input type="submit" class="fadeIn fourth" value="Login" (click) = "entrar()">
-                    </div>
-
-                    <!-- Esqueceu a senha -->
-                    <div id="formFooter">
-                        <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
-                            Esqueceu a conta?
-                        </button>
-
-                        <!-- Modal -->
-                        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false"
-                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="staticBackdropLabel">Encontre sua conta</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form>
-                                            <div class="form-group">
-                                                <label for="exampleInputEmail1">Email address</label>
-                                                <input type="email" class="form-control" id="exampleInputEmail1"
-                                                    aria-describedby="emailHelp">
-                                                <small id="emailHelp" class="form-text text-muted">Digite o e-mail que
-                                                    está relacionado com a sua conta </small>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="exampleInputPassword1">Nome</label>
-                                                <input type="password" class="form-control" id="exampleInputPassword1">
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-dismiss="modal">Fechar</button>
-                                        <button type="button" class="btn btn-primary">Enviar</button>
+    <div class="principal">
+        <div class="container d-flex justify-content-end" style="margin-bottom: 200px;">
+            <div class="row d-flex align-items-center">
+                <div class="col-md-12" style="margin-top: 80px;">
+                    <div id="formContent" style="margin-left: 750px;">
+                        <!-- Tabs Titles -->
+    
+                        <!-- Icon -->
+                        <div class="fadeIn first">
+                            <img src="https://i.imgur.com/pmFAqY6.png" id="icon" alt="Logo zuz" style="width: 10rem;"
+                                class="p-3" />
+                        </div>
+    
+                        <!-- Login Form -->
+                        <div>
+                            <input type="text" id="login" class="fadeIn second" name="login" placeholder="Login" [(ngModel)] = 'usuarioLogin.usuario'> 
+                            <input type="text" id="password" class="fadeIn third" name="login" placeholder="Senha" [(ngModel)] = 'usuarioLogin.senha'>
+                            <input type="submit" class="fadeIn fourth " style="background-color: #6AE362;" value="Login" (click) = "entrar()">
+                        </div>
+    
+                        <!-- Esqueceu a senha -->
+                        <div id="formFooter ">
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#staticBackdrop">
+                                Esqueceu a conta?
+                            </button>
+    
+                            <!-- Modal -->
+                            <div class="modal fade " id="staticBackdrop" data-backdrop="static" data-keyboard="false"
+                                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content ">
+                                        <div class="modal-header ">
+                                            <h5 class="modal-title " id="staticBackdropLabel ">Encontre sua conta</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form>
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">Email address</label>
+                                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                                        aria-describedby="emailHelp">
+                                                    <small id="emailHelp" class="form-text text-muted">Digite o e-mail que
+                                                        está relacionado com a sua conta </small>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleInputPassword1">Nome</label>
+                                                    <input type="password" class="form-control" id="exampleInputPassword1">
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-dismiss="modal">Fechar</button>
+                                            <button type="button" class="btn btn-primary" >Enviar</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div id="formFooter">
-                        <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-primary" data-toggle="modal"
-                            data-target="#staticBackdrop1">
-                            Criar uma nova conta
-                        </button>
-
-                        <!-- Modal -->
-                        <div class="modal fade" id="staticBackdrop1" data-backdrop="static" data-keyboard="false"
-                            tabindex="-1" aria-labelledby="staticBackdropLabel1" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="staticBackdropLabel1">Criar uma nova conta</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div>
-                                            <div class="form-row">
-                                                <div class="form-group col-md-6">
-                                                    <label for="inputNome">Nome</label>
-                                                    <input type="text" class="form-control" id="inputNome" [(ngModel)]='user.nome'>
+    
+                        <div id="formFooter">
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-success  fadeIn" data-toggle="modal"
+                                data-target="#staticBackdrop1">
+                                Criar uma nova conta
+                            </button>
+    
+                            <!-- Modal -->
+                            <div class="modal fade" id="staticBackdrop1" data-backdrop="static" data-keyboard="false"
+                                tabindex="-1" aria-labelledby="staticBackdropLabel1" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="staticBackdropLabel1">Criar uma nova conta</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="inputNome">Nome</label>
+                                                        <input type="text" class="form-control" id="inputNome" [(ngModel)]='user.nome'>
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="inputUsuario">Usuario(e-mail)</label>
+                                                        <input type="text" class="form-control" id="inputUsuario" [(ngModel)]='user.usuario'>
+                                                    </div>
                                                 </div>
-                                                <div class="form-group col-md-6">
-                                                    <label for="inputUsuario">Usuario(e-mail)</label>
-                                                    <input type="text" class="form-control" id="inputUsuario" [(ngModel)]='user.usuario'>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-12">
+                                                        <label for="inputCpf">CPF</label>
+                                                        <input type="text" class="form-control" id="inputCpf" [(ngModel)]='user.cpf'>
+                                                    </div>
+                                                    
+                                                    <div class="form-group col-md-6">
+                                                        <label for="senha">Senha</label>
+                                                        <input type="password" class="form-control" id="senha" (input)='conferirSenha($event)'value="{{senha}}">
+                                                    </div>
+    
+                                                    <div class="form-group col-md-6">
+                                                        <label for="senhaConf">Confirmar Senha</label>
+                                                        <input type="password" class="form-control" id="senhaConf" [(ngModel)]='user.senha'>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="form-row">
-                                                <div class="form-group col-md-12">
-                                                    <label for="inputCpf">CPF</label>
-                                                    <input type="text" class="form-control" id="inputCpf" [(ngModel)]='user.cpf'>
-                                                </div>
+                                           
+                                             
                                                 
-                                                <div class="form-group col-md-6">
-                                                    <label for="senha">Senha</label>
-                                                    <input type="password" class="form-control" id="senha" (input)='conferirSenha($event)'value="{{senha}}">
-                                                </div>
-
-                                                <div class="form-group col-md-6">
-                                                    <label for="senhaConf">Confirmar Senha</label>
-                                                    <input type="password" class="form-control" id="senhaConf" [(ngModel)]='user.senha'>
-                                                </div>
+                                                
                                             </div>
-                                       
-                                         
-                                            
-                                            
                                         </div>
                                     </div>
                                     <div class="modal-footer">
@@ -122,12 +124,15 @@
                                 </div>
                             </div>
                         </div>
+    
                     </div>
-
                 </div>
             </div>
         </div>
-    </div>
 
-    <app-sobre></app-sobre>
-    <app-footer></app-footer>
+    <!-- pagina sobre comeca aqui ooooooooooo
+    ooooooooooo oooooooooo -->
+       
+
+   <app-footer></app-footer>
+    

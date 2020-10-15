@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import{ faGithub } from '@fortawesome/free-brands-svg-icons'
+import{ faLinkedin } from '@fortawesome/free-brands-svg-icons'
+
 
 @Component({
   selector: 'app-sobre',
@@ -6,10 +9,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sobre.component.css']
 })
 export class SobreComponent implements OnInit {
+  
+  faLinkedin = faLinkedin
 
-  constructor() { }
+  faGithub = faGithub
 
-  ngOnInit(): void {
+  constructor() { 
+    
+  }
+
+  ngOnInit(){
+    
+
+    
   }
 
 }
