@@ -252,10 +252,10 @@
           <div class="card-header">
             <h3 class="text-black">Tema: {{item.tema.nometema}}</h3>
           </div>
-          <div class="card-body text-info" >
+          <div class="card-body text-info " width = "600" height = "400">
             <p class="card-text"> {{item.descricao}} </p>
             <div *ngIf = "item.foto != '' ">  
-              <img src="{{item.foto}}" alt="" width = "600" height = "400">
+              <img src="{{item.foto}}" alt="" >
             </div>
             
             <div *ngIf = "item.video != '' ">            
