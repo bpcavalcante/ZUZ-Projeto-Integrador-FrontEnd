@@ -7,12 +7,13 @@
     <div class="col-md-4 d-flex justify-content-start">
       <app-perfil-lateral></app-perfil-lateral>
     </div>
+    
     <div class="col-md-8">
       <div class="card">
         <div class="card-header d-flex justify-content-center">
 
           <!--Criar publicação-->
-          <button type="button" class="btn btn d-flex justify-content-center" data-toggle="modal"
+          <button type="button" class="btn btn d-flex justify-content-center texto1" data-toggle="modal"
             data-target="#exampleModal" data-whatever="@mdo">Comece uma publicação</button>
 
           <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -20,7 +21,7 @@
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Criar publicação</h5>
+                  <h5 class="modal-title texto1" id="exampleModalLabel">Criar publicação</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                     <span aria-hidden="true">&times;</span>
                   </button>
@@ -31,17 +32,17 @@
                   <div>
                     <div class="form-group">
                       <label for="message-text" class="col-form-label"></label>
-                      <textarea class="form-control" id="message-text" placeholder="No que você está pensando?"
+                      <textarea class="form-control texto1" id="message-text" placeholder="No que você está pensando?"
                         [(ngModel)]='postagem.descricao'></textarea>
                     </div>
 
                     <div class="col-md-6 justify-content-end">
                       <div class="form-group m-0">
-                        <label class="text-monospace" for="tema">Escolha um tema ou <a routerLink='/posttema' data-dismiss="modal">Cadastre
+                        <label class="texto1 " for="tema">Escolha um tema ou <a routerLink='/posttema' data-dismiss="modal" class="texto1">Cadastre
                             um novo</a></label>
                         <select name="tema" id='tema' class="form-control" (change)='findByIdTema()' [(ngModel)]='idTema'
                           >
-                          <option *ngFor='let item of listaTemas' value="{{item.id}}">
+                          <option class="texto1" *ngFor='let item of listaTemas' value="{{item.id}}">
                             {{item.nometema}}
                           </option>
                         </select>
@@ -51,7 +52,7 @@
                 </div>
 
 
-                <div class="modal-footer">
+                <div class="modal-footer texto1">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
                   <button type="button" class="btn btn-success" (click)='publicar()' data-dismiss="modal">Publicar</button>
                 </div>
@@ -84,7 +85,7 @@
                     </div>
                   </form>
                 </div>
-                <div class="modal-footer">
+                <div class="modal-footer texto1">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
                   <button type="button" class="btn btn-primary">Concluido</button>
                 </div>
@@ -250,3 +251,5 @@
   
 
 </div>
+
+<app-footer></app-footer>

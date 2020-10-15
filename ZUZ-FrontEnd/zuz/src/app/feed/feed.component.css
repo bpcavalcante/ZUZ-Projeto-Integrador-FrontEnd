@@ -6,3 +6,23 @@
 button {
     width:35%;
 }
+
+.texto1{
+    font-family: 'Segoe UI';
+}
+
+
+.fourth {
+    border-color: #6AE362;
+    color: #28AD50 ;
+    background-image: -webkit-linear-gradient(45deg, #6AE362 50%, transparent 50%);
+    background-image: linear-gradient(45deg, #6AE362 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    -webkit-transition: background 300ms ease-in-out;
+    transition: background 300ms ease-in-out;
+    
+  }
+  .fourth:hover {
+    background-position: 0;
+  }
