@@ -1,14 +1,14 @@
 <app-navbar></app-navbar>
 
 
-<div class="container-fluid" style="margin-top: 100px;">
+<div class="container-fluid" style="background-color: #f5f5f5; margin-top: 100px; color: #f5f5f5; background-color: #f5f5f5">
 
   <div class="row">
-    <div class="col-md-4 d-flex justify-content-start">
+    <div class="col-md-3 d-flex justify-content-start">
       <app-perfil-lateral></app-perfil-lateral>
     </div>
     
-    <div class="col-md-8">
+    <div class="col-md-6">
       <div class="card">
         <div class="card-header d-flex justify-content-center">
 
@@ -21,7 +21,7 @@
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title texto1" id="exampleModalLabel">Criar publicação</h5>
+                  <h5 class="modal-title texto1" id="criarpublicacao">Criar publicação</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                     <span aria-hidden="true">&times;</span>
                   </button>
@@ -68,6 +68,7 @@
                     data-dismiss="modal">Publicar</button>
                 </div>
               </div>
+              
               <!--Fim-->
             </div>
           </div>
@@ -336,6 +337,12 @@
 
 
 
+
+
+    </div>
+    <!-- barra esquerda-->
+    <div class="col-md-3 d-flex justify-content-end">
+      <app-barra-left></app-barra-left>
     </div>
 
   </div>

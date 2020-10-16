@@ -1,8 +1,8 @@
-
     <div class="principal">
         <div class="container d-flex justify-content-end" style="margin-bottom: 200px;">
             <div class="row d-flex align-items-center">
                 <div class="col-md-12" style="margin-top: 80px;">
+
                     <div id="formContent" style="margin-left: 750px;">
                         <!-- Tabs Titles -->
     
@@ -71,48 +71,42 @@
     
                             <!-- Modal -->
                             <div class="modal fade" id="staticBackdrop1" data-backdrop="static" data-keyboard="false"
-                                tabindex="-1" aria-labelledby="staticBackdropLabel1" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="staticBackdropLabel1">Criar uma nova conta</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <div>
-                                                <div class="form-row">
-                                                    <div class="form-group col-md-6">
-                                                        <label for="inputNome">Nome</label>
-                                                        <input type="text" class="form-control" id="inputNome" [(ngModel)]='user.nome'>
-                                                    </div>
-                                                    <div class="form-group col-md-6">
-                                                        <label for="inputUsuario">Usuario(e-mail)</label>
-                                                        <input type="text" class="form-control" id="inputUsuario" [(ngModel)]='user.usuario'>
-                                                    </div>
+                            tabindex="-1" aria-labelledby="staticBackdropLabel1" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel1">Criar uma nova conta</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="inputNome">Nome</label>
+                                                    <input type="text" class="form-control" id="inputNome" [(ngModel)]='user.nome'>
                                                 </div>
-                                                <div class="form-row">
-                                                    <div class="form-group col-md-12">
-                                                        <label for="inputCpf">CPF</label>
-                                                        <input type="text" class="form-control" id="inputCpf" [(ngModel)]='user.cpf'>
-                                                    </div>
-                                                    
-                                                    <div class="form-group col-md-6">
-                                                        <label for="senha">Senha</label>
-                                                        <input type="password" class="form-control" id="senha" (input)='conferirSenha($event)'value="{{senha}}">
-                                                    </div>
-    
-                                                    <div class="form-group col-md-6">
-                                                        <label for="senhaConf">Confirmar Senha</label>
-                                                        <input type="password" class="form-control" id="senhaConf" [(ngModel)]='user.senha'>
-                                                    </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="inputUsuario">Usuario(e-mail)</label>
+                                                    <input type="text" class="form-control" id="inputUsuario" [(ngModel)]='user.usuario'>
                                                 </div>
-                                           
-                                             
-                                                
-                                                
                                             </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-12">
+                                                    <label for="inputCpf">CPF</label>
+                                                    <input type="text" class="form-control" id="inputCpf" [(ngModel)]='user.cpf'>
+                                                </div>
+                                                
+                                                <div class="form-group col-md-6">
+                                                    <label for="senha">Senha</label>
+                                                    <input type="password" class="form-control" id="senha" (input)='conferirSenha($event)'value="{{senha}}">
+                                                </div>
+
+                                                <div class="form-group col-md-6">
+                                                    <label for="senhaConf">Confirmar Senha</label>
+                                                    <input type="password" class="form-control" id="senhaConf" [(ngModel)]='user.senha'>
+                                                </div>
                                         </div>
                                     </div>
                                     <div class="modal-footer">
@@ -124,15 +118,13 @@
                                 </div>
                             </div>
                         </div>
-    
                     </div>
+
                 </div>
             </div>
         </div>
+    </div>
 
     <!-- pagina sobre comeca aqui ooooooooooo
     ooooooooooo oooooooooo -->
        
-
-   <app-footer></app-footer>
-    

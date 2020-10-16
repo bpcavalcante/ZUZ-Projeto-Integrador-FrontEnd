@@ -20,7 +20,7 @@ import { PostTemaComponent } from './post-tema/post-tema.component';
 import { PutTemaComponent } from './put-tema/put-tema.component';
 import { DeleteTemaComponent } from './delete-tema/delete-tema.component';
 import { DeletePostagemComponent } from './delete-postagem/delete-postagem.component';
-import { from } from 'rxjs';
+import { BarraLeftComponent } from './barra-left/barra-left.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +38,8 @@ import { from } from 'rxjs';
     PostTemaComponent,
     PutTemaComponent,
     DeleteTemaComponent,
-    DeletePostagemComponent
+    DeletePostagemComponent,
+    BarraLeftComponent
   ],
   imports: [
     BrowserModule,

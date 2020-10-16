@@ -7,7 +7,7 @@
 NAV FIXED -->
 <nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color: #28AD50;">
   <div class="container-fluid">
-    <a href="#" class="navbar-brand zoom">
+    <a href="/feed" class="navbar-brand zoom">
       <img src="https://i.imgur.com/bdISxuy.png" style="width: 3rem;">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Menu Colapso">  
@@ -32,21 +32,15 @@ NAV FIXED -->
           </button>
         </li>
 
-        <nav class="navbar navbar-light" style="background-color: #28AD50;">
-          <form class="form-inline my-lg-0 my-2">
-            <div class="input-group">
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1">
-                  <img src="../../assets/img/search.png" height="20">
-                </span>
-              </div>
-              <input type="search" class="form-control" placeholder="Pesquisa" aria-label="Usuário" aria-describedby="basic-addon1">
-            </div>
-          </form>
-        </nav>
+        <!-- Botão Pesquisar -->
+        <form class="form-inline">
+          <input class="form-control ml-4" type="search" placeholder="Buscar..." [(ngModel)] = 'nomeTema'>
+          <button class="btn btn-default" type="Submit" (click) = 'findByNomeTema()'>ok</button>
+        </form>
+        <!--/ Botão Pesquisar -->
         
           <div class="btn-group">
-            <button type="button" class="btn" style="background-color: #28AD50;">
+            <button type="button" class="btn" style="background-color: #28AD50;" >
               <img src="../../assets/img/user.png" height="30" alt="">
             </button>
             

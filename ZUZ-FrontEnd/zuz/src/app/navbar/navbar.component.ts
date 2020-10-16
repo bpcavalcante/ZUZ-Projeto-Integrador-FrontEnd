@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Postagem } from '../model/Postagem';
+import { Tema } from '../model/Tema';
+import { TemaService } from '../service/tema.service';
+
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +11,42 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  public titulo: string
+  public listaPostagens: Postagem[]
 
-  ngOnInit(): void {
+  
+  tema: Tema = new Tema()
+  listaTemas: Tema[]
+  nomeTema: string
+
+  constructor(
+    private temaService: TemaService
+
+
+  ) { }
+
+  ngOnInit(){
+    window.scroll(0, 0)
+    this.findAllTemas()
   }
+
+   
+  findByNomeTema(){
+      if(this.nomeTema === ''){
+      this.findAllTemas()
+    } else{
+      this.temaService.getByNomeTema(this.nomeTema).subscribe((resp: Tema[]) => {
+        this.listaTemas = resp
+      })
+    }
+  }
+
+  findAllTemas() {
+    this.temaService.getAllTemas().subscribe((resp: Tema[]) => {
+      this.listaTemas = resp
+    })
+
+  }
+
 
 }

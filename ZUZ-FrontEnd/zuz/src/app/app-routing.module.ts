@@ -6,7 +6,6 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { CarteiraVacinaComponent } from './carteira-vacina/carteira-vacina.component';
 import { FeedComponent } from './feed/feed.component';
 import { HomeComponent } from './home/home.component';
-
 import { PostTemaComponent } from './post-tema/post-tema.component';
 import { PutTemaComponent } from './put-tema/put-tema.component';
 import { SobreComponent } from './sobre/sobre.component';
@@ -23,6 +22,7 @@ const routes: Routes = [
   { path: 'delete-tema/:id' , component: DeleteTemaComponent},
   { path: 'cadastro-tema', component: CadastroComponent},
   { path: 'carteira-vacina', component: CarteiraVacinaComponent}
+  
 
 ];
 
