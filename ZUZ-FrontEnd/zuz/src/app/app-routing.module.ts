@@ -1,14 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-<<<<<<< HEAD
 import { DeletePostagemComponent } from './delete-postagem/delete-postagem.component';
 import { DeleteTemaComponent } from './delete-tema/delete-tema.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { CarteiraVacinaComponent } from './carteira-vacina/carteira-vacina.component';
-=======
-import { CadastroComponent } from './cadastro/cadastro.component';
-import { ConsultasComponent } from './consultas/consultas.component';
->>>>>>> consultas
 import { FeedComponent } from './feed/feed.component';
 import { HomeComponent } from './home/home.component';
 import { PostTemaComponent } from './post-tema/post-tema.component';
