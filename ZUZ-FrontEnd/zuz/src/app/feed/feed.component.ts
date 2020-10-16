@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { environment } from 'src/environments/environment.prod';
 import { Postagem } from '../model/Postagem';
 import { Tema } from '../model/Tema';
 import { AuthService } from '../service/auth.service';
@@ -22,8 +21,6 @@ export class FeedComponent implements OnInit {
 
   tema: Tema = new Tema()
   listaTemas: Tema[]
-  nomeTema: string
-
 
   idTema: number;
 
@@ -36,14 +33,13 @@ export class FeedComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-   
-    /*this.idPost = this.route.snapshot.params['id']
+    this.findAllPostagens()
+    this.findAllTemas()
+
+    this.idPost = this.route.snapshot.params['id']
     if (this.idPost != undefined){
       this.findByIdPostagem(this.idPost)
-    }*/
-    this.nomeTema = this.route.snapshot.params['nome']
-      this.findByNomeTema(this.nomeTema)
-    
+    }
 
   }
 
@@ -71,7 +67,7 @@ export class FeedComponent implements OnInit {
 
   findAllTemas() {
     this.temaService.getAllTemas().subscribe((resp: Tema[]) => {
-      this.listaTemas = resp      
+      this.listaTemas = resp
     })
   }
 
@@ -114,16 +110,6 @@ export class FeedComponent implements OnInit {
     this.router.navigate(['/feed'])
   }
 
-  findByNomeTema(nomeTema: string){
-    if(nomeTema === ''){
-    this.findAllTemas()
-    console.log("estou aqui no if")
-  } else{
-    this.temaService.getByNomeTema(nomeTema).subscribe((resp: Tema[]) => {
-      this.listaTemas = resp
-      console.log("estou aqui no else " + this.listaTemas)
-    })
-  }
-  }
+
 
 }
