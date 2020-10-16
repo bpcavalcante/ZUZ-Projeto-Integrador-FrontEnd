@@ -22,6 +22,7 @@ import { DeleteTemaComponent } from './delete-tema/delete-tema.component';
 import { DeletePostagemComponent } from './delete-postagem/delete-postagem.component';
 import { BarraDireitaComponent } from './barra-direita/barra-direita.component';
 
+import { ConsultasComponent } from './consultas/consultas.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { BarraDireitaComponent } from './barra-direita/barra-direita.component';
     PutTemaComponent,
     DeleteTemaComponent,
     DeletePostagemComponent,
-    BarraDireitaComponent
+    BarraDireitaComponent,
+    ConsultasComponent
   ],
   imports: [
     BrowserModule,
