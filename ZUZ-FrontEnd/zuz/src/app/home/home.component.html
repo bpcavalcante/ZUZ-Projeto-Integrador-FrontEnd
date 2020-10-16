@@ -107,6 +107,13 @@
                                                     <label for="senhaConf">Confirmar Senha</label>
                                                     <input type="password" class="form-control" id="senhaConf" [(ngModel)]='user.senha'>
                                                 </div>
+                                            <div class="row">
+                                                <div class="form-group">
+                                                    <label for="message-text" class="col-form-label"></label>
+                                                    <input class="form-control" id="message-text" placeholder="Poste o link da imagem"
+                                                      [(ngModel)]='user.foto'>
+                                                  </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="modal-footer">

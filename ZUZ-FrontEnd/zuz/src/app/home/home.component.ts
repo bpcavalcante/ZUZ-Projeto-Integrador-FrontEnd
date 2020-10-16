@@ -47,6 +47,8 @@ export class HomeComponent implements OnInit {
     this.authService.logar(this.usuarioLogin).subscribe((resp: UsuarioLogin)=> {
       this.usuarioLogin = resp
       localStorage.setItem('token', this.usuarioLogin.token)
+      localStorage.setItem('foto', this.usuarioLogin.foto)
+      localStorage.setItem('nome', this.usuarioLogin.nome)
       this.router.navigate(['/feed'])
     });
     

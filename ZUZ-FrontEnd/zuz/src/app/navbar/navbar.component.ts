@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 import { Postagem } from '../model/Postagem';
 import { Tema } from '../model/Tema';
 import { TemaService } from '../service/tema.service';
@@ -20,7 +22,9 @@ export class NavbarComponent implements OnInit {
   nomeTema: string
 
   constructor(
-    private temaService: TemaService
+    private temaService: TemaService,
+    private router: Router
+    
 
 
   ) { }
@@ -46,6 +50,9 @@ export class NavbarComponent implements OnInit {
       this.listaTemas = resp
     })
 
+  }
+  buscaPorTema(){
+    this.router.navigate(['/feed',this.nomeTema])
   }
 
 

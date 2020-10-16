@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PerfilLateralComponent implements OnInit {
 
+  userFoto = localStorage.getItem("foto")
+  userNome = localStorage.getItem("nome")
+
   constructor() { }
 
   ngOnInit(): void {

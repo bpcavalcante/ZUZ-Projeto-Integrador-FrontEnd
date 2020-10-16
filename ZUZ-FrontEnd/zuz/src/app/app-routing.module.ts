@@ -16,6 +16,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: 'feed', component: FeedComponent},
   { path: 'feed/:id', component: FeedComponent},
+  { path: 'feed/:nome', component: FeedComponent},
   { path: 'sobre' , component: SobreComponent},
   { path: 'posttema', component: PostTemaComponent},
   { path: 'delete-postagem', component: DeletePostagemComponent},

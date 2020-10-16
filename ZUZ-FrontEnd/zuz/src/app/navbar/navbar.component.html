@@ -33,13 +33,13 @@ NAV FIXED -->
         </li>
 
         <!-- Botão Pesquisar -->
-        <form class="form-inline">
-          <input class="form-control ml-4" type="search" placeholder="Buscar..." [(ngModel)] = 'nomeTema'>
-          <button class="btn btn-default" type="Submit" (click) = 'findByNomeTema()'>ok</button>
-        </form>
+        <div class="form-inline">
+          <input class="form-control ml-2-" type="search" placeholder="Buscar..." [(ngModel)] = 'nomeTema'>
+          <button class="btn btn-default" type="Submit" (click) = 'buscaPorTema()'>ok</button>
+        </div>
         <!--/ Botão Pesquisar -->
         
-          <div class="btn-group">
+          <div class="btn-group mx-2">
             <button type="button" class="btn" style="background-color: #28AD50;" >
               <img src="../../assets/img/user.png" height="30" alt="">
             </button>
