@@ -23,7 +23,7 @@ export class FeedComponent implements OnInit {
   tema: Tema = new Tema()
   listaTemas: Tema[]
   nomeTema: string
-
+  postagensPadrao: boolean
 
   idTema: number;
 
@@ -36,20 +36,26 @@ export class FeedComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-   
-    /*this.idPost = this.route.snapshot.params['id']
+    this.findAllPostagens()
+    this.findAllTemas()
+
+    let token = localStorage.getItem('token')
+    if (token == null){
+      alert('Faça o login antes de acessar essa rota!')
+      this.router.navigate(['/home'])
+    }
+
+    this.idPost = this.route.snapshot.params['id']
     if (this.idPost != undefined){
       this.findByIdPostagem(this.idPost)
-    }*/
-    this.nomeTema = this.route.snapshot.params['nome']
-      this.findByNomeTema(this.nomeTema)
-    
+    }
 
   }
 
   findAllPostagens() {
     this.postagemService.getAllPostagens().subscribe((resp: Postagem[]) => {
       this.listaPostagens = resp
+      this.router.navigate(['/feed'])
     })
   }
 
@@ -71,7 +77,7 @@ export class FeedComponent implements OnInit {
 
   findAllTemas() {
     this.temaService.getAllTemas().subscribe((resp: Tema[]) => {
-      this.listaTemas = resp      
+      this.listaTemas = resp
     })
   }
 
@@ -84,6 +90,7 @@ export class FeedComponent implements OnInit {
   findByIdPostagem(id: number) {
     this.postagemService.getByIdPostagem(id).subscribe((resp: Postagem) => {
       this.postagem = resp
+
     })
   }
 
@@ -114,14 +121,12 @@ export class FeedComponent implements OnInit {
     this.router.navigate(['/feed'])
   }
 
-  findByNomeTema(nomeTema: string){
-    if(nomeTema === ''){
+  findByNomeTema(){
+    if(this.nomeTema == '' || this.nomeTema == null){
     this.findAllTemas()
-    console.log("estou aqui no if")
   } else{
-    this.temaService.getByNomeTema(nomeTema).subscribe((resp: Tema[]) => {
+    this.temaService.getByNomeTema(this.nomeTema).subscribe((resp: Tema[]) => {
       this.listaTemas = resp
-      console.log("estou aqui no else " + this.listaTemas)
     })
   }
   }

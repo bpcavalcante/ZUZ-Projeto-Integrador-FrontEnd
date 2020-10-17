@@ -10,7 +10,7 @@ export class AuthService {
 
   constructor(
     private http: HttpClient
-    
+
   ) { }
 
   logar(usuarioLogin: UsuarioLogin){
@@ -19,6 +19,15 @@ export class AuthService {
 
   cadastrar(usuario: User){
     return this.http.post('http://localhost:8080/usuarios/cadastrar', usuario)
+  }
+
+  navbar(){
+    let ok = false
+    let token = localStorage.getItem('token')
+    if (token != null){
+      ok = true
+    }
+    return ok
   }
 
 }

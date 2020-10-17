@@ -21,10 +21,22 @@ button {
     background-size: 400%;
     -webkit-transition: background 300ms ease-in-out;
     transition: background 300ms ease-in-out;
-    
+
   }
   .fourth:hover {
     background-position: 0;
   }
 
-  
+  input{
+    border:#ddd solid 1px;
+    float:left;
+    padding:5px 20px 5px 5px
+ }
+
+
+/* webkit solution */
+::-webkit-input-placeholder {
+  font-family: FontAwesome;
+  text-align: right;
+}
+
