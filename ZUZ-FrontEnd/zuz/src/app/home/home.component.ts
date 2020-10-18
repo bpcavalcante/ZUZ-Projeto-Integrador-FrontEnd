@@ -19,11 +19,12 @@ export class HomeComponent implements OnInit {
 
 
 
-  constructor( 
-    private authService: AuthService, 
+  constructor(
+    private authService: AuthService,
     private router:Router) { }
 
   ngOnInit() {
+    localStorage.clear()
   }
 
   conferirSenha(event: any){
@@ -36,7 +37,7 @@ export class HomeComponent implements OnInit {
         this.user = resp
         this.router.navigate(["/home"])
         alert("Usuário cadastrado com sucesso !")
-        
+
       })}
     else{
       alert('Senhas não conferem!')
@@ -53,7 +54,7 @@ export class HomeComponent implements OnInit {
       environment.token = this.usuarioLogin.nome
       this.router.navigate(['/feed'])
     });
-    
+
   }
 
 

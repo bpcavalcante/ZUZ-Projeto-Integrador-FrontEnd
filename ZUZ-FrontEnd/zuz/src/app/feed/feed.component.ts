@@ -22,6 +22,11 @@ export class FeedComponent implements OnInit {
 
   tema: Tema = new Tema()
   listaTemas: Tema[]
+<<<<<<< HEAD
+=======
+  nomeTema: string
+  postagensPadrao: boolean
+>>>>>>> a5180dcae9f3a1abda37c7bbd87842cc36908706
 
   idTema: number;
 
@@ -34,6 +39,7 @@ export class FeedComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+<<<<<<< HEAD
 
     let token = environment.token
 
@@ -46,6 +52,17 @@ export class FeedComponent implements OnInit {
     this.findAllPostagens()
     this.findAllTemas()
 
+=======
+    this.findAllPostagens()
+    this.findAllTemas()
+
+    let token = localStorage.getItem('token')
+    if (token == null){
+      alert('Faça o login antes de acessar essa rota!')
+      this.router.navigate(['/home'])
+    }
+
+>>>>>>> a5180dcae9f3a1abda37c7bbd87842cc36908706
     this.idPost = this.route.snapshot.params['id']
     if (this.idPost != undefined){
       this.findByIdPostagem(this.idPost)
@@ -56,6 +73,7 @@ export class FeedComponent implements OnInit {
   findAllPostagens() {
     this.postagemService.getAllPostagens().subscribe((resp: Postagem[]) => {
       this.listaPostagens = resp
+      this.router.navigate(['/feed'])
     })
   }
 
@@ -90,6 +108,7 @@ export class FeedComponent implements OnInit {
   findByIdPostagem(id: number) {
     this.postagemService.getByIdPostagem(id).subscribe((resp: Postagem) => {
       this.postagem = resp
+
     })
   }
 
@@ -120,6 +139,18 @@ export class FeedComponent implements OnInit {
     this.router.navigate(['/feed'])
   }
 
+<<<<<<< HEAD
+=======
+  findByNomeTema(){
+    if(this.nomeTema == '' || this.nomeTema == null){
+    this.findAllTemas()
+  } else{
+    this.temaService.getByNomeTema(this.nomeTema).subscribe((resp: Tema[]) => {
+      this.listaTemas = resp
+    })
+  }
+  }
+>>>>>>> a5180dcae9f3a1abda37c7bbd87842cc36908706
 
 
 }

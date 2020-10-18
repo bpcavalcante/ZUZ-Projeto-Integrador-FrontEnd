@@ -10,7 +10,7 @@ export class TemaService {
 
   constructor(
     private http: HttpClient
-    
+
   ) { }
 
   token = {
