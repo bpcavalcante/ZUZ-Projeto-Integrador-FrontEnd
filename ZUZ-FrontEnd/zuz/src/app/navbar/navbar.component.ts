@@ -55,5 +55,9 @@ export class NavbarComponent implements OnInit {
     this.router.navigate(['/feed',this.nomeTema])
   }
 
+  sair(){
+    this.router.navigate(['/home'])
+    environment.token = ''
+  }
 
 }

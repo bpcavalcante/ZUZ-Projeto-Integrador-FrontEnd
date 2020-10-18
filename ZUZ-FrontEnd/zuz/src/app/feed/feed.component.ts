@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 import { Postagem } from '../model/Postagem';
 import { Tema } from '../model/Tema';
 import { AuthService } from '../service/auth.service';
@@ -33,6 +34,15 @@ export class FeedComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+
+    let token = environment.token
+
+    if(token == '' ) {
+      this.router.navigate(['/home'])
+    }
+
+    window.scroll(0, 0)
+
     this.findAllPostagens()
     this.findAllTemas()
 
