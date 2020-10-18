@@ -1,3 +1,4 @@
+import { AuthService } from './../service/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
@@ -16,44 +17,25 @@ export class NavbarComponent implements OnInit {
   public titulo: string
   public listaPostagens: Postagem[]
 
-  
+
   tema: Tema = new Tema()
   listaTemas: Tema[]
   nomeTema: string
 
   constructor(
-    private temaService: TemaService,
-    private router: Router
-    
-
-
+    private router: Router,
+    public auth: AuthService
   ) { }
 
   ngOnInit(){
-    window.scroll(0, 0)
-    this.findAllTemas()
   }
 
-   
-  findByNomeTema(){
-      if(this.nomeTema === ''){
-      this.findAllTemas()
-    } else{
-      this.temaService.getByNomeTema(this.nomeTema).subscribe((resp: Tema[]) => {
-        this.listaTemas = resp
-      })
-    }
+  sair(){
+    localStorage.clear()
+    this.router.navigate(['/home'])
   }
 
-  findAllTemas() {
-    this.temaService.getAllTemas().subscribe((resp: Tema[]) => {
-      this.listaTemas = resp
-    })
 
-  }
-  buscaPorTema(){
-    this.router.navigate(['/feed',this.nomeTema])
-  }
 
 
 }

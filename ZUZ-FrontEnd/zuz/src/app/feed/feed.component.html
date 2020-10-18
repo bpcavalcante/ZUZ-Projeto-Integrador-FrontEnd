@@ -1,27 +1,34 @@
-<app-navbar></app-navbar>
 
 
 <div class="container-fluid" style="background-color: #f5f5f5; margin-top: 100px; color: #f5f5f5; background-color: #f5f5f5">
 
   <div class="row">
+
     <div class="col-md-3 d-flex justify-content-start">
       <app-perfil-lateral></app-perfil-lateral>
     </div>
     
     <div class="col-md-6">
-      <div class="card">
-        <div class="card-header d-flex justify-content-center">
+      <div class="row">
+        <div class="col-md-12">
 
-          <!--Criar publicação-->
-          <button type="button" class="btn btn d-flex justify-content-center texto1" data-toggle="modal"
-            data-target="#cadastrar" data-whatever="@mdo">Comece uma publicação</button>
+          <div class="card">
+            <div class="card-header d-flex justify-content-center">
+              <button type="button" class="btn btn d-flex justify-content-center texto1" data-toggle="modal"
+                data-target="#cadastrar" data-whatever="@mdo">
+                Comece uma publicação
+              </button>
+            </div>
+          </div>
 
           <div class="modal fade" id="cadastrar" tabindex="-1" role="dialog" aria-labelledby="criarpublicacao"
             aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title texto1 text-dark" id="criarpublicacao">Criar publicação</h5>
+                  <h5 class="modal-title texto1" id="criarpublicacao">
+                    Criar publicação
+                  </h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                     <span aria-hidden="true">&times;</span>
                   </button>
@@ -31,29 +38,30 @@
                 <div class="modal-body">
                   <div>
                     <div class="form-group">
-                      <label for="message-text" class="col-form-label"></label>
-                      <textarea class="form-control texto1" id="message-text" placeholder="No que você está pensando?"
-                        [(ngModel)]='postagem.descricao'></textarea>
+                      <label for="message-text1" class="col-form-label"></label>
+                      <textarea class="form-control texto1" id="message-text1" placeholder="No que você está pensando?"
+                        [(ngModel)]="postagem.descricao"></textarea>
                     </div>
                     <div class="form-group">
-                      <label for="message-text" class="col-form-label"></label>
-                      <input class="form-control" id="message-text" placeholder="Poste o link da imagem"
-                        [(ngModel)]='postagem.foto'>
+                      <label for="message-text2" class="col-form-label"></label>
+                      <input class="form-control" id="message-text2" placeholder="Poste o link da imagem"
+                        [(ngModel)]="postagem.foto" />
                     </div>
                     <div class="form-group">
                       <label for="message-text" class="col-form-label"></label>
                       <input class="form-control" id="message-text" placeholder="Poste o link do video"
-                        [(ngModel)]='postagem.video'>
+                        [(ngModel)]="postagem.video" />
                     </div>
 
                     <div class="col-md-6 justify-content-end">
                       <div class="form-group m-0">
-                        <label class="texto1 " for="tema">Escolha um tema ou <a routerLink='/posttema' data-dismiss="modal" class="texto1">Cadastre
-                            um novo</a></label>
-                        <select name="tema" id='tema' class="form-control" (change)='findByIdTema()' [(ngModel)]='idTema'
-                          >
-                          <option class="texto1" *ngFor='let item of listaTemas' value="{{item.id}}">
-                            {{item.nometema}}
+                        <label class="texto1" for="tema">Escolha um tema ou
+                          <a routerLink="/posttema" data-dismiss="modal" class="texto1">Cadastre um
+                            novo</a></label>
+                        <select name="tema" id="tema" class="form-control" (change)="findByIdTema()"
+                          [(ngModel)]="idTema">
+                          <option class="texto1" *ngFor="let item of listaTemas" value="{{ item.id }}">
+                            {{ item.nometema }}
                           </option>
                         </select>
                       </div>
@@ -63,215 +71,83 @@
 
 
                 <div class="modal-footer texto1">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                  <button type="button" class="btn btn-success" (click)='publicar()'
-                    data-dismiss="modal">Publicar</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                    Fechar
+                  </button>
+                  <button type="button" class="btn btn-success" (click)="publicar()" data-dismiss="modal">
+                    Publicar
+                  </button>
                 </div>
               </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="row d-flex justify-content-center mt-5">
+        <div class="col-md-6">
+
+
+
+        <div class="input-group">
+            <input type="text" class="form-control rounded" placeholder="Digite um tema para pesquisar  &#xF002;" aria-label="pesquisa por tema" [(ngModel)]='nomeTema' (keyup)='findByNomeTema()'><i id="lupa"></i>
+          </div>
+        </div>
+      </div>
+
+      <!--Card novo-->
+      <div class="row mb-5 mt-5" *ngFor="let item of listaTemas">
+        <div class="col-md-12"  *ngFor="let post of item.postagem">
+          <div class="card border-success mb-3">
+            <div class="card-header bg-transparent border-success">
+              <h3>Tema: {{item.nometema}}</h3>
+            </div>
+              <!--Texto-->
+              <div class="card-body text-info" >
+                <p class="card-text">{{ item.descricao }}</p>
+              </div>
+              <!--/Texto-->
+              <!--Imagem-->
+              <div *ngIf="item.foto != ''">
+                <img src="{{ item.foto }}" alt="" />
+              </div>
+              <!--Imagem-->
+              <!--Vídeo-->
+              <div *ngIf="item.video != ''">
+                <object width="600" height="400">
+                    <param name="movie" value="{{ item.video }}" />
+                      <embed src="{{ item.video }}" type="application/x-shockwave-flash"/>
+                </object>
+              </div>
+              <!--/Vídeo-->
+
               
-              <!--Fim-->
-            </div>
-          </div>
-        </div>
-        <!--Criar publicação-->
+            <div class="card-footer bg-transparent border-success">Footer
+              <div class="row">
+                <div class="col-md-8">
+                  <small id="texto" class="form-text m-0 text-muted mb-3 text-monospace">
+                    Postado em {{ post.dataPostagem | date: "dd/MM/yyyy" }} às
+                    {{ post.dataPostagem | date: "HH:mm" }}
+                  </small>
 
-        <div class="container-flex d-flex justify-content-center">
-
-          <!--Botão foto-->
-          <button type="button" class="btn btn-light" data-toggle="modal" data-target="#modalExemplo"> Foto </button>
-          <div class="modal fade" id="modalExemploFoto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel"> Foto </h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
                 </div>
-                <div class="modal-body">
-                  <form>
-                    <div class="form-group">
-                      <label for="exampleFormControlFile1"></label>
-                      <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                    </div>
-                  </form>
-                </div>
-                <div class="modal-footer texto1">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                  <button type="button" class="btn btn-primary">Concluido</button>
+                <div class="col-md-4">
+                  <td class="d-flex justify-content-end">
+                    <a class="btn btn-outline-info mr-3" data-toggle="modal" data-target="#editar" [routerLink] = "['/feed', item.id]" >Editar</a>
+                    <a class="btn btn-outline-danger"  data-toggle="modal" data-target="#apagar" [routerLink] = "['/feed', item.id]">Apagar</a>
+                  </td>
+                  
                 </div>
               </div>
+
             </div>
-          </div>
-          <!--Botão Foto-->
-
-          <!--Botão video-->
-          <button type="button" class="btn btn-light" data-toggle="modal" data-target="#modalExemplo"> Video </button>
-          <div class="modal fade" id="modalExemploVideo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Video</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <form>
-                    <div class="form-group">
-                      <label for="exampleFormControlFile2"></label>
-                      <input type="file" class="form-control-file" id="exampleFormControlFile2">
-                    </div>
-                  </form>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                  <button type="button" class="btn btn-primary">Concluido</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--Botão video-->
-
-          <!--Botão artigo-->
-          <button type="button" class="btn btn-light" data-toggle="modal" data-target="#modalExemplo"> Artigo </button>
-          <div class="modal fade" id="modalExemploArtigo" tabindex="-1" role="dialog"
-            aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Artigo</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <form>
-                    <div class="form-group">
-                      <label for="exampleFormControlFile3"></label>
-                      <input type="file" class="form-control-file" id="exampleFormControlFile3">
-                    </div>
-                  </form>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                  <button type="button" class="btn btn-primary">Concluido</button>
-                </div>
-              </div>
-            </div>
-            <!--Botão artigo-->
-            <nav class="d-flex justify-content-center">
-              <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                <a class="nav-item nav-link active text-secondary font-weight-bold" id="nav-home-tab" data-toggle="tab"
-                  href="#minhas-postagens" role="tab" aria-controls="nav-home" aria-selected="true">Minhas Postagens</a>
-
-                <a class="nav-item nav-link text-secondary font-weight-bold" id="nav-profile-tab" data-toggle="tab"
-                  href="#postagens-temas" role="tab" aria-controls="nav-profile" aria-selected="false">Postagens por
-                  tema</a>
-              </div>
-            </nav>
-
-            <div class="tab-content" id="nav-tabContent">
-
-              <div class="tab-pane fade show active" id="minhas-postagens" role="tabpanel"
-                aria-labelledby="nav-postagens-tab">
-                <div class="row mt-3 mb-3">
-                  <div class="col-md-10 pr-0">
-                    <input class="form-control w-100" type="search" placeholder="Pesquisar postagem"
-                      aria-label="Pesquisar">
-                  </div>
-                  <div class="col-md-2 pl-0">
-                    <button class="btn btn-outline-warning w-100" type="button">Pesquisar</button>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-12">
-
-                    <div class="card mt-5 mb-5" *ngFor="let item of listaPostagens">
-                      <div class="card-header">
-                        <div class="row d-flex align-items-center">
-                          <div class="col-md-8">
-                            <h5 class="card-title"> {{item.descricao}} </h5>
-                            <small>Tema: {{item.tema.descricao}} </small>
-                          </div>
-                          <div class="col-md-4 d-flex justify-content-end">
-
-                            <button class="mr-3 btn btn-outline-info" [routerLink]="['/editar-post', item.id]">
-                              Editar
-                            </button>
-
-                            <button class="btn btn-outline-danger ml-3" [routerLink]="['/delete-post', item.id]">
-                              Apagar
-                            </button>
-
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="card-body">
-                        <p class="card-text" aria-describedby="texto"> {{item.texto}} </p>
-                        <small id="texto" class="form-text m-0 text-muted mb-3 text-monospace">
-                          Postado em {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date:'HH:mm'}}</small>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-
-
-              </div>
-
-              <div class="tab-pane fade" id="postagens-temas" role="tabpanel" aria-labelledby="nav-presenca-tab">
-                <div class="row mt-3 mb-3">
-                  <div class="col-md-10 pr-0">
-                    <input class="form-control w-100" type="search" placeholder="Pesquisar postagem"
-                      aria-label="Pesquisar">
-                  </div>
-                  <div class="col-md-2 pl-0">
-                    <button class="btn btn-outline-warning w-100" type="button">Pesquisar</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-
-
-
-
-          </div>
-        </div>
-
-
-      </div>
-      <!--Postagens-->
-      <div class="row mt-5" style="margin-left: 5px;">
-        <div class="card border mb-3" *ngFor="let item of listaPostagens | orderBy : key : reverse"
-          style="width: 865px;">
-          <div class="card-header">
-            <h3 class="text-dark">Tema: {{item.tema.nometema}}</h3>
-          </div>
-          <div class="card-body text-info " width = "600" height = "400">
-            <p class="card-text"> {{item.descricao}} </p>
-            <div *ngIf = "item.foto != '' ">  
-              <img src="{{item.foto}}" alt="" >
-            </div>
-            
-            <div *ngIf = "item.video != '' ">            
-              <object width="600" height="400">
-                <param name="movie" value="{{item.video}}" />
-                <embed src="{{item.video}}"  type="application/x-shockwave-flash"/>
-              </object>
-            </div>
-            <td class="d-flex justify-content-end"> <!--*****************************************-->
-              <a class="btn btn-outline-info mr-3" data-toggle="modal" data-target="#editar" [routerLink] = "['/feed', item.id]" >Editar</a>
-              <a class="btn btn-outline-danger"  data-toggle="modal" data-target="#apagar" [routerLink] = "['/feed', item.id]">Apagar</a>
-            </td>
           </div>
         </div>
       </div>
+      <!--/Card Novo-->
+      <!-- Modal Teste -->
+
 
       <!--Modal editar-->
       <div class="modal fade" id="editar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -311,8 +187,7 @@
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
               <button type="button" class="btn btn-success" (click)='salvar()'  data-dismiss="modal">Salvar</button>
             </div>
-          </div>
-          <!--Fim-->
+          </div>       
         </div>
       </div>
 
@@ -338,17 +213,12 @@
 
 
 
-
     </div>
-    <!-- barra esquerda-->
-    <div class="col-md-3 d-flex justify-content-end">
+
+    <div class="col-md-3">
       <app-barra-direita></app-barra-direita>
     </div>
 
   </div>
-
-  <!-- Postagem -->
-
 </div>
-
 <app-footer></app-footer>
