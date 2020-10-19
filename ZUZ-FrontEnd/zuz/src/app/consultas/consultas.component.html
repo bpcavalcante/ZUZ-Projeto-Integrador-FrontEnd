@@ -1,56 +1,99 @@
 <app-navbar></app-navbar>
-<div class="container-fluid" style="background-color: #f5f5f5; margin-top: 80px; color: #f5f5f5; background-color: #f5f5f5">
-    <div class="row">
-  
-      <div class="col-md-3 mt-5">
-        <app-perfil-lateral></app-perfil-lateral>
-      </div>
-  
-      <div class="col-md-6 mt-5">
-        <h3 class="text-center mb-4 text-monospace">Consultas</h3>
-            <p>
-                <label for="date">Data</label>
-                <input type="date" id="date">
-            </p>
-            <p>
-                <label for="time">Hora</label>
-                <input type="time" id="time">
-            </p>
-            <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Especialidade</label>
-                <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-                    <option selected>Escolher...</option>
-                    <option value="1">Angiologia</option>
-                    <option value="2">Cardiologia</option>
-                    <option value="3">Geral</option>
-                    <option value="2">Pediatria</option>
-                    <option value="4">Dermatologia</option>
-                    <option value="5">Endocrinologia</option>
-                    <option value="6">Fonoaudiologia</option>
-                    <option value="7">Gastroenterologia</option>
-                    <option value="8">Geriatria</option>
-                    <option value="9">Ginecologia</option>
-                    <option value="10">Neurologia</option>
-                    <option value="11">Nutrição</option>
-                    <option value="12">Obstetrícia</option>
-                    <option value="13">Ortopedia</option>
-                    <option value="14">Oftalmologia</option>
-                    <option value="15">Otorrinolaringologia</option>
-                    <option value="16">Pneumologia</option>
-                    <option value="17">Proctologia</option>
-                    <option value="18">Psiquiatria</option>
-                    <option value="19">Urologia</option>
-                    <option value="20">Cirurgia</option>
-                </select>
-                <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Deseja ser lembrado da consulta</label>
-                </div>
-                    <button type="submit" class="btn btn-primary">Marcar</button>
-      </div>
 
-      <div class="col-md-3 mt-5">
-        <app-barra-direita></app-barra-direita>
-      </div>
 
+
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="col-md-3 mt-5">
+      <app-perfil-lateral></app-perfil-lateral>
     </div>
-</div>
+
+    <div class="col-md-6 mt-5">
+      <div class="card mb-3 mt-5">
+        <img class="card-img-top" src="https://i.imgur.com/jX70LPX.jpg" alt="Imagem de capa do card">
+        <div class="card-body">
+
+          <h5 class="card-title">Marque a sua consulta</h5>
+
+          
+
+         
+
+        <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Especialidade</label>
+        <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+            <option selected>Escolher...</option>
+            <option value="1">Angiologia</option>
+            <option value="2">Cardiologia</option>
+            <option value="3">Geral</option>
+            <option value="2">Pediatria</option>
+            <option value="4">Dermatologia</option>
+            <option value="5">Endocrinologia</option>
+            <option value="6">Fonoaudiologia</option>
+            <option value="7">Gastroenterologia</option>
+            <option value="8">Geriatria</option>
+            <option value="9">Ginecologia</option>
+            <option value="10">Neurologia</option>
+            <option value="11">Nutrição</option>
+            <option value="12">Obstetrícia</option>
+            <option value="13">Ortopedia</option>
+            <option value="14">Oftalmologia</option>
+            <option value="15">Otorrinolaringologia</option>
+            <option value="16">Pneumologia</option>
+            <option value="17">Proctologia</option>
+            <option value="18">Psiquiatria</option>
+            <option value="19">Urologia</option>
+            <option value="20">Cirurgia</option>
+        </select>
+        
+        <div class="col d-flex">
+          <p class="mt-3">
+            <label  for="date">Data</label>
+            <input class="ml-2" type="date" id="date">
+        </p>
+        <p class="mt-3 ml-3">
+            <label for="time">Hora</label>
+            <input class="ml-2" type="time" id="time">
+        </p>
+        </div>
+
+
+
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Deseja ser lembrado da consulta?</label>
+      </div>
+          <button type="submit" class="btn btn-primary">Marcar</button>
+        </div>
+      </div>
+  
+    </div>
+   
+
+    <div class="col-md-3 mt-5">
+      <app-barra-direita></app-barra-direita>
+    </div>
+
+     </div>
+</div> 
+
+<app-footer></app-footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
