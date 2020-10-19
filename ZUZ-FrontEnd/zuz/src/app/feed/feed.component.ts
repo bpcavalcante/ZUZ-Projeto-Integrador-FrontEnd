@@ -54,13 +54,13 @@ export class FeedComponent implements OnInit {
   findAllPostagens() {
     this.postagemService.getAllPostagens().subscribe((resp: Postagem[]) => {
       this.listaPostagens = resp
-      this.router.navigate(['/feed'])
     })
   }
 
   publicar() {
     this.tema.id = this.idTema
     this.postagem.tema = this.tema
+    
 
     if (this.postagem.descricao == null || this.postagem.descricao == null || this.postagem.tema == null) {
       alert('Preencha todos os campos antes de publicar !')
@@ -70,8 +70,10 @@ export class FeedComponent implements OnInit {
         this.postagem = new Postagem()
         alert('Postagem realizada com sucesso!')
         this.findAllPostagens()
+        location.reload()
       })
     }
+    
   }
 
   findAllTemas() {

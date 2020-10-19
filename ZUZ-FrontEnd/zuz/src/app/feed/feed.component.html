@@ -105,20 +105,26 @@
             </div>
               <!--Texto-->
               <div class="card-body text-info" >
-                <p class="card-text">{{ item.descricao }}</p>
+                <p class="card-text">{{ post.descricao }}</p>
               </div>
               <!--/Texto-->
               <!--Imagem-->
-              <div *ngIf="item.foto != ''">
-                <img src="{{ item.foto }}" alt="" />
+              <div class="embed-responsive m-5 embed-responsive-4by3">
+                <div  *ngIf="post.foto != ''">
+                  <img class="embed-responsive-item" src="{{ post.foto }}" alt="" />
+                </div>
               </div>
               <!--Imagem-->
               <!--Vídeo-->
-              <div *ngIf="item.video != ''">
-                <object width="600" height="400">
-                    <param name="movie" value="{{ item.video }}" />
-                      <embed src="{{ item.video }}" type="application/x-shockwave-flash"/>
-                </object>
+              
+              <div class="embed-responsive m-5 embed-responsive-4by3">
+                
+                <div *ngIf="post.video != ''">
+                  <object class="embed-responsive-item">
+                      <param name="movie" value="{{ post.video }}" />
+                        <embed src="{{ post.video }}" type="application/x-shockwave-flash"/>
+                  </object>
+                </div>
               </div>
               <!--/Vídeo-->
 
@@ -134,8 +140,8 @@
                 </div>
                 <div class="col-md-4">
                   <td class="d-flex justify-content-end">
-                    <a class="btn btn-outline-info mr-3" data-toggle="modal" data-target="#editar" [routerLink] = "['/feed', item.id]" >Editar</a>
-                    <a class="btn btn-outline-danger"  data-toggle="modal" data-target="#apagar" [routerLink] = "['/feed', item.id]">Apagar</a>
+                    <a class="btn btn-outline-info mr-3" data-toggle="modal" data-target="#editar" [routerLink] = "['/feed', post.id]" >Editar</a>
+                    <a class="btn btn-outline-danger"  data-toggle="modal" data-target="#apagar" [routerLink] = "['/feed', post.id]">Apagar</a>
                   </td>
                   
                 </div>
@@ -146,6 +152,8 @@
         </div>
       </div>
       <!--/Card Novo-->
+
+      
       <!-- Modal Teste -->
 
 
