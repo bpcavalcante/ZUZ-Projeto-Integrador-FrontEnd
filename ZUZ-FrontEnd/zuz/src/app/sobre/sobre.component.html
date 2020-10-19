@@ -1,273 +1,294 @@
 <app-navbar></app-navbar>
+
 <div class="parallax">
-    <!--jumbotron-->
+<!--jumbotron-->
+
+<div class="jumbotron jumbotron-fluid mt-3" style="background-color: #6AE362; ">
+    <div class="container mt-3">
+        <h1 class="display-4 text-center " style="color: #ffffff; font-family: 'Segoe UI';">Uma rede que une médicos e pacientes.</h1>
+        
+    </div>
+</div>
+<!--/jumbotron-->
+    <!--Carrosel-->
+<div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+
     
-    <div class="jumbotron jumbotron-fluid mt-5" style="background-color: #6AE362; ">
-        <div class="container mt-5">
-            <h1 class="display-4 text-center " style="color: #ffffff; font-family: 'Segoe UI';">Uma rede que une médicos e pacientes.</h1>
+    
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="d-block w-100" src="https://i.imgur.com/K6Wzm53.png" alt="Primeiro Slide">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="https://i.imgur.com/h1uoOiw.png" alt="Segundo Slide">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="https://i.imgur.com/Rx73pKe.png" alt="Terceiro Slide">
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Próximo</span>
+    </a>
+</div>
+<!--/Carrosel-->
+
+<!--jumbotron-->
+<div class="jumbotron jumbotron-fluid" style="background-color: #6AE362;">
+    <div class="container">
+        <h1 class="display-4 text-center" style="color: #ffffff; font-family: 'Segoe UI';">Conheça nossa equipe.</h1>
+        <p class="lead"></p>
+    </div>
+</div>
+<!--/jumbotron-->
+
+<!--fotos-->
+<div class="container ">
+
+    <div class="row mt-3 mb-3 " >
+
+        <div class="col-md-2">
+            <img style="width: 13rem;" class="rounded-circle" src="https://i.imgur.com/zrSdyZ0.jpg"
+                alt="Foto Pâmela Xavier">
+        </div>
+
+        <div class="col-md-4">
+            <div class=" p-5">
+                <div class="card border " style="width: 18rem;">
+                    <div class="card-body" >
+                        <h5 class="card-title texto1" >Pâmela Xavier</h5>
+                        <h6 class="texto1 card-subtitle mb-2 text-muted" >A vida não é um quadro pronto, e sim uma obra de arte que se revela com uma nova pincelada a cada dia.</h6>
+                        <p class="mb-2 text-muted d-flex justify-content-end">Roberto Shinyashiki</p>
+                        
+                        <div class="d-flex justify-content-end " > 
+                            <a href="https://www.linkedin.com/in/pâmela-xavier/" target="_blank" class="icoLinkedin " title="Linkedin">
+                            <fa-icon [icon]="faLinkedin" class="faLinkedin fa-2x p-2"></fa-icon>
+                           </a>
+                           <a href="https://github.com/Pamy05" target="_blank" class="icoGithub" title="Github">
+                            <fa-icon [icon]="faGithub" class="faGithub fa-2x p-2"></fa-icon>
+                           </a> 
+                        </div>
+
+                     </div>
+                </div>
+            </div>
+
+         </div>
+
+         <div class="col-md-2">
+            <img style="width: 13rem;" class="rounded-circle " src="https://i.imgur.com/Hebt2qD.jpg"
+                alt="Foto Alex Cesar">
+        </div>
+
+        <div class="col-md-4">
+            <div class=" p-5">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="texto1 card-title">Alex Cesar</h5>
+                        <h6 class="texto1 card-subtitle mb-2 text-muted">A simplicidade é o último grau da sofisticação</h6>
+                        <p class="mb-2 text-muted d-flex justify-content-end"> Leonardo da Vinci</p>
+                        <div class="d-flex justify-content-end " > 
+                            <a href="https://www.linkedin.com/in/alexcesarn/" target="_blank" class="icoLinkedin " title="Linkedin">
+                            <fa-icon [icon]="faLinkedin" class="faLinkedin fa-2x p-2"></fa-icon>
+                           </a>
+                           <a href="https://github.com/AlexCesarNascimento" target="_blank" class="icoGithub" title="Github">
+                            <fa-icon [icon]="faGithub" class="faGithub fa-2x p-2"></fa-icon>
+                           </a> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+         </div>
+
+     </div>   
+
+
+     <div class="row mt-3 mb-3">
+
+        <div class="col-md-2">
+            <img style="width: 13rem;" class="rounded-circle" src="https://i.imgur.com/0vwE064.jpg"
+                alt="Foto Agnes-Ruescas">
+        </div>
+
+        <div class="col-md-4">
+            <div class=" p-5">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="texto1 card-title">Agnes Ruescas</h5>
+                        <h6 class="texto1 card-subtitle mb-2 text-muted">Facilidade é a maior ameaça ao progresso do que a dificuldade.
+                            </h6>
+                            <p class="mb-2 text-muted d-flex justify-content-end">Denzel</p>
+
+                            <div class="d-flex justify-content-end " > 
+                                <a href="https://www.linkedin.com/in/agnesruescas/" target="_blank" class="icoLinkedin " title="Linkedin">
+                                <fa-icon [icon]="faLinkedin" class="faLinkedin fa-2x p-2"></fa-icon>
+                               </a>
+                               <a href="https://github.com/Agnes-Ruescas" target="_blank" class="icoGithub" title="Github">
+                                <fa-icon [icon]="faGithub" class="faGithub fa-2x p-2"></fa-icon>
+                               </a> 
+
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+         </div>
+
+         <div class="col-md-2">
+            <img style="width: 13rem;" class="rounded-circle" src="https://i.imgur.com/BVMaLWv.jpg"
+                alt="Foto Bruno Profeta">
+        </div>
+
+        <div class="col-md-4">
+            <div class=" p-5">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="texto1 card-title">Bruno Profeta</h5>
+                        <h6 class="texto1 card-subtitle mb-2 text-muted">A vitalidade é demonstrada não apenas pela persistência, mas pela capacidade de começar de novo.</h6>
+                        <p class="mb-2 text-muted d-flex justify-content-end">F. Scott Fitzgerald</p>                                        
+                                                               
+                        <div class="d-flex justify-content-end " > 
+                            <a href="https://www.linkedin.com/in/bruno-profeta-cavalcante/" target="_blank" class="icoLinkedin " title="Linkedin">
+                            <fa-icon [icon]="faLinkedin" class="faLinkedin fa-2x p-2"></fa-icon>
+                           </a>
+                           <a href="https://github.com/bpcavalcante"target="_blank"class="icoGithub" title="Github">
+                            <fa-icon [icon]="faGithub" class="faGithub fa-2x p-2"></fa-icon>
+                           </a> 
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+         </div>
+
+     </div>   
+
+     <div class="row mt-3 mb-3">
+
+        <div class="col-md-2">
+            <img style="width: 13rem;" class="rounded-circle" src="https://i.imgur.com/aHva3pj.jpg"
+                alt="Foto fabio casaroti">
+        </div>
+
+        <div class="col-md-4">
+            <div class=" p-5">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="texto1 card-title">Fábio Casaroti</h5>
+                        <h6 class="texto1 card-subtitle mb-2 text-muted">Eu conheço o preço do sucesso: dedicação, trabalho duro e uma incessante devoção às coisas que você quer ver acontecer.</h6>
+                             <p class="mb-2 text-muted d-flex justify-content-end">Frank Lloyd Wright</p>
+                           
+                             <div class="d-flex justify-content-end " > 
+                                <a href="https://www.linkedin.com/in/casarotif/" target="_blank" class="icoLinkedin " title="Linkedin">
+                                <fa-icon [icon]="faLinkedin" class="faLinkedin fa-2x p-2"></fa-icon>
+                               </a>
+                               <a href="https://www.linkedin.com/in/casarotif/"target="_blank"class="icoGithub" title="Github">
+                                <fa-icon [icon]="faGithub" class="faGithub fa-2x p-2"></fa-icon>
+                               </a> 
+    
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+         </div>
+
+
+     </div>   
+     
+     
+    </div>
+ <!--/fotos-->
+
+
+
+
+  
+</div>
+
+<!--jumbotron-->
+
+<div class="jumbotron jumbotron-fluid" style="background-color: #6AE362; ">
+    <div class="container">
+        <h1 class="display-4 text-center " style="color: #ffffff; font-family: 'Segoe UI';">Conheça nossos parceiros.</h1>
+        
+    </div>
+</div>
+<!--/jumbotron-->
+
+
+<div class="slider">
+	<div class="slide-track">
+		<div class="slide mb-5">
+            <img src="https://i.imgur.com/5PCqCuf.png" style="width: 10rem;" alt="HoldingHands" />
+            
+		</div>
+		<div class="slide">
+            <img src="https://i.imgur.com/W10u5Jk.png" style="width: 10rem;" alt="Doa Commerce" />
+            
+		</div>
+		<div class="slide">
+            <img src="https://i.imgur.com/76ugAOh.png" style="width: 10rem;" alt="Impacta+" />
+            
+		</div>
+		<div class="slide">
+            <img src="https://i.imgur.com/7WN3GTx.png" style="width: 10rem;" alt="Pró-Causas" />
+            
+		</div>
+		<div class="slide">
+            <img src="https://i.imgur.com/zmUhGji.png" style="width: 10rem;" alt="OnTheGo" />
+            
+		</div>
+		<div class="slide">
+            <img src="https://i.imgur.com/sTwkX4f.png" style="width: 10rem;" alt="Plante um Árvore" />
             
         </div>
-    </div>
-    <!--/jumbotron-->
-        <!--Carrosel-->
-    <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-    
-        
-        
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="d-block w-100" src="https://i.imgur.com/K6Wzm53.png" alt="Primeiro Slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="https://i.imgur.com/h1uoOiw.png" alt="Segundo Slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="https://i.imgur.com/Rx73pKe.png" alt="Terceiro Slide">
-            </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Anterior</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Próximo</span>
-        </a>
-    </div>
-    <!--/Carrosel-->
-    
-    <!--jumbotron-->
-    <div class="jumbotron jumbotron-fluid" style="background-color: #6AE362;">
-        <div class="container">
-            <h1 class="display-4 text-center" style="color: #ffffff; font-family: 'Segoe UI';">Conheça nossa equipe.</h1>
-            <p class="lead"></p>
-        </div>
-    </div>
-    <!--/jumbotron-->
-    
-    <!--fotos-->
-    <div class="container ">
-    
-        <div class="row mt-3 mb-3 " >
-    
-            <div class="col-md-2">
-                <img style="width: 13rem;" class="rounded-circle" src="https://i.imgur.com/zrSdyZ0.jpg"
-                    alt="Foto Pâmela Xavier">
-            </div>
-    
-            <div class="col-md-4">
-                <div class=" p-5">
-                    <div class="card border " style="width: 18rem;">
-                        <div class="card-body" >
-                            <h5 class="card-title texto1" >Pâmela Xavier</h5>
-                            <h6 class="texto1 card-subtitle mb-2 text-muted" >A vida não é um quadro pronto, e sim uma obra de arte que se revela com uma nova pincelada a cada dia.</h6>
-                            <p class="mb-2 text-muted d-flex justify-content-end">Roberto Shinyashiki</p>
-                            
-                            <div class="d-flex justify-content-end " > 
-                                <a href="https://www.linkedin.com/in/pâmela-xavier/" target="_blank" class="icoLinkedin " title="Linkedin">
-                                <fa-icon [icon]="faLinkedin" class="faLinkedin fa-2x p-2"></fa-icon>
-                               </a>
-                               <a href="https://github.com/Pamy05" target="_blank" class="icoGithub" title="Github">
-                                <fa-icon [icon]="faGithub" class="faGithub fa-2x p-2"></fa-icon>
-                               </a> 
-                            </div>
-    
-                         </div>
-                    </div>
-                </div>
-    
-             </div>
-    
-             <div class="col-md-2">
-                <img style="width: 13rem;" class="rounded-circle " src="https://i.imgur.com/Hebt2qD.jpg"
-                    alt="Foto Alex Cesar">
-            </div>
-    
-            <div class="col-md-4">
-                <div class=" p-5">
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="texto1 card-title">Alex Cesar</h5>
-                            <h6 class="texto1 card-subtitle mb-2 text-muted">A simplicidade é o último grau da sofisticação</h6>
-                            <p class="mb-2 text-muted d-flex justify-content-end"> Leonardo da Vinci</p>
-                            <div class="d-flex justify-content-end " > 
-                                <a href="https://www.linkedin.com/in/alexcesarn/" target="_blank" class="icoLinkedin " title="Linkedin">
-                                <fa-icon [icon]="faLinkedin" class="faLinkedin fa-2x p-2"></fa-icon>
-                               </a>
-                               <a href="https://github.com/AlexCesarNascimento" target="_blank" class="icoGithub" title="Github">
-                                <fa-icon [icon]="faGithub" class="faGithub fa-2x p-2"></fa-icon>
-                               </a> 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-             </div>
-    
-         </div>   
-    
-    
-         <div class="row mt-3 mb-3">
-    
-            <div class="col-md-2">
-                <img style="width: 13rem;" class="rounded-circle" src="https://i.imgur.com/0vwE064.jpg"
-                    alt="Foto Agnes-Ruescas">
-            </div>
-    
-            <div class="col-md-4">
-                <div class=" p-5">
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="texto1 card-title">Agnes Ruescas</h5>
-                            <h6 class="texto1 card-subtitle mb-2 text-muted">Facilidade é a maior ameaça ao progresso do que a dificuldade.
-                                </h6>
-                                <p class="mb-2 text-muted d-flex justify-content-end">Denzel</p>
-    
-                                <div class="d-flex justify-content-end " > 
-                                    <a href="https://www.linkedin.com/in/agnesruescas/" target="_blank" class="icoLinkedin " title="Linkedin">
-                                    <fa-icon [icon]="faLinkedin" class="faLinkedin fa-2x p-2"></fa-icon>
-                                   </a>
-                                   <a href="https://github.com/Agnes-Ruescas" target="_blank" class="icoGithub" title="Github">
-                                    <fa-icon [icon]="faGithub" class="faGithub fa-2x p-2"></fa-icon>
-                                   </a> 
-    
-                                </div>
-                        </div>
-                    </div>
-                </div>
-    
-             </div>
-    
-             <div class="col-md-2">
-                <img style="width: 13rem;" class="rounded-circle" src="https://i.imgur.com/BVMaLWv.jpg"
-                    alt="Foto Bruno Profeta">
-            </div>
-    
-            <div class="col-md-4">
-                <div class=" p-5">
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="texto1 card-title">Bruno Profeta</h5>
-                            <h6 class="texto1 card-subtitle mb-2 text-muted">A vitalidade é demonstrada não apenas pela persistência, mas pela capacidade de começar de novo.</h6>
-                            <p class="mb-2 text-muted d-flex justify-content-end">F. Scott Fitzgerald</p>                                        
-                                                                   
-                            <div class="d-flex justify-content-end " > 
-                                <a href="https://www.linkedin.com/in/bruno-profeta-cavalcante/" target="_blank" class="icoLinkedin " title="Linkedin">
-                                <fa-icon [icon]="faLinkedin" class="faLinkedin fa-2x p-2"></fa-icon>
-                               </a>
-                               <a href="https://github.com/bpcavalcante"target="_blank"class="icoGithub" title="Github">
-                                <fa-icon [icon]="faGithub" class="faGithub fa-2x p-2"></fa-icon>
-                               </a> 
-    
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-             </div>
-    
-         </div>   
-    
-         <div class="row mt-3 mb-3">
-    
-            <div class="col-md-2">
-                <img style="width: 13rem;" class="rounded-circle" src="https://i.imgur.com/aHva3pj.jpg"
-                    alt="Foto fabio casaroti">
-            </div>
-    
-            <div class="col-md-4">
-                <div class=" p-5">
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="texto1 card-title">Fábio Casaroti</h5>
-                            <h6 class="texto1 card-subtitle mb-2 text-muted">Eu conheço o preço do sucesso: dedicação, trabalho duro e uma incessante devoção às coisas que você quer ver acontecer.</h6>
-                                 <p class="mb-2 text-muted d-flex justify-content-end">Frank Lloyd Wright</p>
-                               
-                                 <div class="d-flex justify-content-end " > 
-                                    <a href="https://www.linkedin.com/in/casarotif/" target="_blank" class="icoLinkedin " title="Linkedin">
-                                    <fa-icon [icon]="faLinkedin" class="faLinkedin fa-2x p-2"></fa-icon>
-                                   </a>
-                                   <a href="https://www.linkedin.com/in/casarotif/"target="_blank"class="icoGithub" title="Github">
-                                    <fa-icon [icon]="faGithub" class="faGithub fa-2x p-2"></fa-icon>
-                                   </a> 
-        
-                                </div>
-                        </div>
-                    </div>
-                </div>
-    
-             </div>
-    
-    
-         </div>   
-         
-         
-        </div>
-     <!--/fotos-->
-    
-    
-    
-    
-      
-    </div>
-    
-    
-    <div class="slider">
-        <div class="slide-track">
-            <div class="slide mb-5">
-                <img src="https://i.imgur.com/5PCqCuf.png" style="width: 10rem;" alt="HoldingHands" />
-                
-            </div>
-            <div class="slide">
-                <img src="https://i.imgur.com/W10u5Jk.png" style="width: 10rem;" alt="Doa Commerce" />
-                
-            </div>
-            <div class="slide">
-                <img src="https://i.imgur.com/76ugAOh.png" style="width: 10rem;" alt="Impacta+" />
-                
-            </div>
-            <div class="slide">
-                <img src="https://i.imgur.com/7WN3GTx.png" style="width: 10rem;" alt="Pró-Causas" />
-                
-            </div>
-            <div class="slide">
-                <img src="https://i.imgur.com/zmUhGji.png" style="width: 10rem;" alt="OnTheGo" />
-                
-            </div>
-            <div class="slide">
-                <img src="https://i.imgur.com/sTwkX4f.png" style="width: 10rem;" alt="Plante um Árvore" />
-                
-            </div>
-            <div class="slide mb-5">
-                <img src="https://i.imgur.com/5PCqCuf.png" style="width: 10rem;" alt="HoldingHands" />
-                
-            </div>
-            <div class="slide">
-                <img src="https://i.imgur.com/W10u5Jk.png" style="width: 10rem;" alt="Doa Commerce" />
-                
-            </div>
-            <div class="slide">
-                <img src="https://i.imgur.com/76ugAOh.png" style="width: 10rem;" alt="Impacta+" />
-                
-            </div>
-            <div class="slide">
-                <img src="https://i.imgur.com/7WN3GTx.png" style="width: 10rem;" alt="Pró-Causas" />
-                
-            </div>
-            <div class="slide">
-                <img src="https://i.imgur.com/zmUhGji.png" style="width: 10rem;" alt="OnTheGo" />
-                
-            </div>
-            <div class="slide">
-                <img src="https://i.imgur.com/sTwkX4f.png" style="width: 10rem;" alt="Plante um Árvore" />
-                
-            </div>
+        <div class="slide">
+            <img src="https://i.imgur.com/5ywsI5S.png" style="width: 10rem;" alt="Generation" />
+            
+		</div>
+        <div class="slide mb-5">
+            <img src="https://i.imgur.com/5PCqCuf.png" style="width: 10rem;" alt="HoldingHands" />
+            
+		</div>
+		<div class="slide">
+            <img src="https://i.imgur.com/W10u5Jk.png" style="width: 10rem;" alt="Doa Commerce" />
+            
+		</div>
+		<div class="slide">
+            <img src="https://i.imgur.com/76ugAOh.png" style="width: 10rem;" alt="Impacta+" />
+            
+		</div>
+		<div class="slide">
+            <img src="https://i.imgur.com/7WN3GTx.png" style="width: 10rem;" alt="Pró-Causas" />
+            
+		</div>
+		<div class="slide">
+            <img src="https://i.imgur.com/zmUhGji.png" style="width: 10rem;" alt="OnTheGo" />
+            
+		</div>
+		<div class="slide">
+            <img src="https://i.imgur.com/sTwkX4f.png" style="width: 10rem;" alt="Plante um Árvore" />
             
         </div>
-    </div>
-    <app-footer></app-footer>
+        <div class="slide">
+            <img src="https://i.imgur.com/5ywsI5S.png" style="width: 10rem;" alt="Gerenation" />
+            
+		</div>
+		
+	</div>
+</div>
+
+    
+   <app-footer></app-footer>
