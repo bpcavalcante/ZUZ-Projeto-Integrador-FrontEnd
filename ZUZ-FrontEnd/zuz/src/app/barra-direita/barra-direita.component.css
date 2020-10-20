@@ -1,0 +1,45 @@
+.texto1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif    ;
+}
+
+.fade
+{
+        opacity:.5;
+}
+.fade:hover
+{
+        opacity:1;
+}
+#menu li{
+    text-align: start;
+    
+}
+
+#menu li a:hover{
+    color: #6AE362;
+}
+
+#menu li a{
+    text-decoration: none;
+    color: grey;
+    font-size: 15px;
+}
+
+#menu2 li{
+    text-align: start;
+    
+}
+
+#menu2 li a:hover{
+    color: #6AE362;
+}
+
+#menu2 li a{
+    text-decoration: none;
+    color: grey;
+    font-size: 14px;
+}
+
+ 
+
+ 
