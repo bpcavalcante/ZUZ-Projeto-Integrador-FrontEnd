@@ -104,12 +104,12 @@
               <h3>Tema: {{item.nometema}}</h3>
             </div>
               <!--Texto-->
-              <div class="card-body text-info" >
+              <div class="card-body text-dark texto1" >
                 <p class="card-text">{{ post.descricao }}</p>
               </div>
               <!--/Texto-->
               <!--Imagem-->
-              <div style="width: 35rem;" class="embed-responsive m-5 embed-responsive-4by3">
+              <div style="width: 35rem;" class="embed-responsive ml-4  embed-responsive-4by3">
                 <div  *ngIf="post.foto != ''">
                   <img class="embed-responsive-item" src="{{ post.foto }}" alt="" />
                 </div>
@@ -117,7 +117,7 @@
               <!--Imagem-->
               <!--Vídeo-->
               
-              <div style="width: 35rem;" class="embed-responsive m-5 embed-responsive-4by3">
+              <div style="width: 35rem;" class="embed-responsive ml-4 mt-3 embed-responsive-4by3">
                 
                 <div *ngIf="post.video != ''">
                   <object class="embed-responsive-item">
