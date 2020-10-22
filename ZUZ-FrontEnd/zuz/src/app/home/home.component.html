@@ -1,31 +1,35 @@
-    <div class="principal">
-        <div class="container d-flex justify-content-end" style="margin-bottom: 200px;">
-            <div class="row d-flex align-items-center">
-                <div class="col-md-12" style="margin-top: 80px;">
-
-                    <div id="formContent" style="margin-left: 750px;">
+<div class="principal">
+    <div class="container d-flex justify-content-end " style="margin-bottom: 200px;">
+        <div class="row d-flex align-items-center">
+                <div class="col-md-6 d-flex justify-content-center">
+                    <H1 style="color: white; text-shadow: 2px 2px 2px black;  margin-top:250px; text-align: justify" >
+                        Ser ZUZ é reinventar o <br> sistema de saúde com a <br> transformação digital
+                    </H1>
+                </div>
+                <div class="col-md-6 d-flex justify-content-center">
+                    <div id="formContent" style="margin-left:100px; margin-top:100px;">
                         <!-- Tabs Titles -->
-    
+
                         <!-- Icon -->
                         <div class="fadeIn first">
                             <img src="https://i.imgur.com/pmFAqY6.png" id="icon" alt="Logo zuz" style="width: 10rem;"
                                 class="p-3" />
                         </div>
-    
+
                         <!-- Login Form -->
                         <div>
                             <input type="text" id="login" class="fadeIn second" name="login" placeholder="Login" [(ngModel)] = 'usuarioLogin.usuario'> 
                             <input type="password" id="password" class="fadeIn third" name="login" placeholder="Senha" [(ngModel)] = 'usuarioLogin.senha'>
                             <input type="submit" class="fadeIn fourth " style="background-color: #6AE362;" value="Login" (click) = "entrar()">
                         </div>
-    
+
                         <!-- Esqueceu a senha -->
                         <div id="formFooter ">
                             <!-- Button trigger modal -->
                             <button type="button" class="btn btn-success" data-toggle="modal" data-target="#staticBackdrop">
                                 Esqueceu a conta?
                             </button>
-    
+
                             <!-- Modal -->
                             <div class="modal fade " id="staticBackdrop" data-backdrop="static" data-keyboard="false"
                                 tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -61,76 +65,76 @@
                                 </div>
                             </div>
                         </div>
-    
+
                         <div id="formFooter">
                             <!-- Button trigger modal -->
                             <button type="button" class="btn btn-success  fadeIn" data-toggle="modal"
                                 data-target="#staticBackdrop1">
                                 Criar uma nova conta
                             </button>
-    
-                            <!-- Modal -->
-                            <div class="modal fade" id="staticBackdrop1" data-backdrop="static" data-keyboard="false"
-                            tabindex="-1" aria-labelledby="staticBackdropLabel1" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="staticBackdropLabel1">Criar uma nova conta</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div>
-                                            <div class="form-row">
-                                                <div class="form-group col-md-6">
-                                                    <label for="inputNome">Nome</label>
-                                                    <input type="text" class="form-control" id="inputNome" [(ngModel)]='user.nome'>
-                                                </div>
-                                                <div class="form-group col-md-6">
-                                                    <label for="inputUsuario">Usuario(e-mail)</label>
-                                                    <input type="text" class="form-control" id="inputUsuario" [(ngModel)]='user.usuario'>
-                                                </div>
-                                            </div>
-                                            <div class="form-row">
-                                                <div class="form-group col-md-12">
-                                                    <label for="inputCpf">CPF</label>
-                                                    <input type="text" class="form-control" id="inputCpf" [(ngModel)]='user.cpf'>
-                                                </div>
-                                                
-                                                <div class="form-group col-md-6">
-                                                    <label for="senha">Senha</label>
-                                                    <input type="password" class="form-control" id="senha" (input)='conferirSenha($event)'value="{{senha}}">
-                                                </div>
 
-                                                <div class="form-group col-md-6">
-                                                    <label for="senhaConf">Confirmar Senha</label>
-                                                    <input type="password" class="form-control" id="senhaConf" [(ngModel)]='user.senha'>
+                            <!-- Modal -->
+                            <div class="modal fade" id="staticBackdrop1" data-backdrop="static"             data-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel1" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="staticBackdropLabel1">Criar uma nova conta</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="inputNome">Nome</label>
+                                                        <input type="text" class="form-control" id="inputNome" [(ngModel)]='user.nome'>
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="inputUsuario">Usuario(e-mail)</label>
+                                                        <input type="text" class="form-control" id="inputUsuario" [(ngModel)]='user.usuario'>
+                                                    </div>
                                                 </div>
-                                            <div class="row">
-                                                <div class="form-group">
-                                                    <label for="message-text" class="col-form-label"></label>
-                                                    <input class="form-control" id="message-text" placeholder="Poste o link da imagem"
-                                                      [(ngModel)]='user.foto'>
-                                                  </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-12">
+                                                        <label for="inputCpf">CPF</label>
+                                                        <input type="text" class="form-control" id="inputCpf" [(ngModel)]='user.cpf'>
+                                                    </div>
+                                                    
+                                                    <div class="form-group col-md-6">
+                                                        <label for="senha">Senha</label>
+                                                        <input type="password" class="form-control" id="senha" (input)='conferirSenha($event)'value="{{senha}}">
+                                                    </div>
+
+                                                    <div class="form-group col-md-6">
+                                                        <label for="senhaConf">Confirmar Senha</label>
+                                                        <input type="password" class="form-control" id="senhaConf" [(ngModel)]='user.senha'>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="form-group">
+                                                            <label for="message-text" class="col-form-label"></label>
+                                                            <input class="form-control" id="message-text" placeholder="Poste o link da imagem"
+                                                            [(ngModel)]='user.foto'>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger"
+                                                data-dismiss="modal">Fechar</button>
+                                            <button type="button" class="btn btn-success" data-dismiss="modal" (click)='cadastrar()'>Cadastrar</button>
+                                        </div>
+                                        
                                     </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-danger"
-                                            data-dismiss="modal">Fechar</button>
-                                        <button type="button" class="btn btn-success" data-dismiss="modal" (click)='cadastrar()'>Cadastrar</button>
-                                    </div>
-                                    
                                 </div>
                             </div>
                         </div>
-                    </div>
-
                 </div>
             </div>
         </div>
-        </div>
     </div>
+</div>
 <app-sobre></app-sobre>
        

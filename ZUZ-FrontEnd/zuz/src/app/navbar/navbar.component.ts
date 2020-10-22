@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Postagem } from '../model/Postagem';
 import { Tema } from '../model/Tema';
-import { TemaService } from '../service/tema.service';
+
 
 
 @Component({
