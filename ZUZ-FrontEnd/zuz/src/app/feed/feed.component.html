@@ -26,7 +26,7 @@
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title texto1" id="criarpublicacao">
+                  <h5 class="modal-title texto1 text-dark" id="criarpublicacao">
                     Criar publicação
                   </h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
@@ -43,19 +43,18 @@
                         [(ngModel)]="postagem.descricao"></textarea>
                     </div>
                     <div class="form-group">
-                      <label for="message-text2" class="col-form-label"></label>
-                      <input class="form-control" id="message-text2" placeholder="Poste o link da imagem"
+                      <input class="form-control mb-3" id="message-text2" placeholder="Poste o link da imagem"
                         [(ngModel)]="postagem.foto" />
                     </div>
-                    <div class="form-group">
+                    <div class="form-group ">
                       <label for="message-text" class="col-form-label"></label>
-                      <input class="form-control" id="message-text" placeholder="Poste o link do video"
+                      <input class="form-control mb-3" id="message-text" placeholder="Poste o link do video"
                         [(ngModel)]="postagem.video" />
                     </div>
 
                     <div class="col-md-6 justify-content-end">
                       <div class="form-group m-0">
-                        <label class="texto1" for="tema">Escolha um tema ou
+                        <label class="texto1 text-dark" for="tema">Escolha um tema ou
                           <a routerLink="/posttema" data-dismiss="modal" class="texto1">Cadastre um
                             novo</a></label>
                         <select name="tema" id="tema" class="form-control" (change)="findByIdTema()"
@@ -97,7 +96,7 @@
       </div>
 
       <!--Card novo-->
-      <div class="row mb-5 mt-5" *ngFor="let item of listaTemas">
+      <div class="row mb-5 mt-5" *ngFor="let item of listaTemas | orderBy : key : reverse">
         <div class="col-md-12"  *ngFor="let post of item.postagem">
           <div class="card border-success mb-3">
             <div class="card-header bg-transparent border-success text-dark">
