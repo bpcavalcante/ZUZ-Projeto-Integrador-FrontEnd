@@ -97,7 +97,7 @@
       </div>
 
       <!--Card novo-->
-      <div class="row mb-5 mt-5" *ngFor="let item of listaTemas">
+      <div class="row mb-5 mt-5" *ngFor="let item of listaTemas | orderBy : key : reverse">
         <div class="col-md-12"  *ngFor="let post of item.postagem">
           <div class="card border-success mb-3">
             <div class="card-header bg-transparent border-success text-dark">
